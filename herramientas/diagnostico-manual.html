@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Diagnóstico de su Manual de Políticas Internas · Antilavado 360</title>
+<meta content="noindex,nofollow" name="robots"/>
+<link href="../estilo.css" rel="stylesheet"/>
+<style>
+ .hero .meta b{color:#fff}
+ .aviso-priv{background:#F7F8FA;border:1px solid #E4E8EE;border-radius:9px;padding:14px 20px;margin:18px 0;font-size:.9rem;color:#5A6472}
+ .aviso-priv b{color:#12224A}
+
+ /* barra de calificación pegajosa */
+ .marcador{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid #E4E8EE;
+   box-shadow:0 2px 12px rgba(18,34,74,.07);padding:14px 0;margin:0 0 26px}
+ .marcador .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+ .marcador .cuenta{font-size:.95rem;font-weight:bold;color:#12224A;white-space:nowrap}
+ .barra{flex:1;min-width:170px;height:12px;background:#E4E8EE;border-radius:6px;overflow:hidden}
+ .barra i{display:block;height:100%;width:0;background:#1E7A4C;transition:width .3s}
+ .sem{font-size:.78rem;font-weight:bold;letter-spacing:.05em;color:#fff;background:#6B7480;
+   border-radius:20px;padding:6px 15px;white-space:nowrap}
+ .btn-lim{font-family:inherit;font-size:.82rem;font-weight:bold;padding:9px 16px;border-radius:8px;
+   border:1.5px solid #E4E8EE;background:#fff;color:#5A6472;cursor:pointer}
+ .btn-lim:hover{border-color:#12224A;color:#12224A}
+
+ /* renglones */
+ .ren{border:1px solid #E4E8EE;border-left:5px solid #C3CAD6;border-radius:9px;padding:18px 22px;margin:0 0 13px;background:#fff}
+ .ren.si{border-left-color:#1E7A4C;background:#F4FAF6}
+ .ren.no{border-left-color:#B3261E;background:#FDF6F5}
+ .ren.pa{border-left-color:#F2A541;background:#FFFCF6}
+ .ren.na{opacity:.55}
+ .ren .cab{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:9px}
+ .et-crit{font-size:.66rem;font-weight:bold;letter-spacing:.09em;padding:4px 10px;border-radius:12px;color:#fff}
+ .et-crit.critico{background:#B3261E}
+ .et-crit.alto{background:#C4622B}
+ .et-crit.medio{background:#5A6472}
+ .et-fr{font-size:.7rem;font-weight:bold;letter-spacing:.06em;color:#5A6472;background:#F7F8FA;
+   border:1px solid #E4E8EE;border-radius:5px;padding:3px 9px}
+ .et-reg{font-size:.7rem;font-weight:bold;letter-spacing:.06em;color:#B07A12}
+ .ren h3{font-family:Georgia,serif;font-size:1.12rem;color:#12224A;margin:0 0 7px;line-height:1.3}
+ .ren .pide{font-size:.93rem;color:#1B2430;margin:0 0 9px}
+ .ren .fun{font-size:.78rem;color:#5A6472;font-style:italic;margin:0 0 13px}
+ .ops{display:flex;gap:8px;flex-wrap:wrap}
+ .ops button{font-family:inherit;font-size:.84rem;font-weight:bold;padding:9px 15px;border-radius:8px;
+   border:1.5px solid #E4E8EE;background:#fff;color:#5A6472;cursor:pointer;transition:.12s}
+ .ops button:hover{border-color:#12224A;color:#12224A}
+ .ops button.sel{background:#12224A;border-color:#12224A;color:#fff}
+ .ops button.sel[data-v="si"]{background:#1E7A4C;border-color:#1E7A4C}
+ .ops button.sel[data-v="no"]{background:#B3261E;border-color:#B3261E}
+ .ops button.sel[data-v="pa"]{background:#B07A12;border-color:#B07A12}
+
+ /* resultado */
+ .res{background:#12224A;color:#fff;border-radius:12px;padding:30px 34px;margin:34px 0 22px}
+ .res h2{color:#fff;margin:0 0 6px;font-size:1.7rem}
+ .res .gran{font-family:Georgia,serif;font-size:4rem;font-weight:bold;line-height:1;margin:12px 0 4px;color:#F2A541}
+ .res .lec{color:#DCE4F2;font-size:1.02rem;margin:0}
+ .res .desg{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid #2C4278}
+ .res .desg div{font-size:.86rem;color:#9FB0D0}
+ .res .desg b{display:block;font-size:1.5rem;color:#fff;font-family:Georgia,serif}
+ .recos{margin:0 0 30px}
+ .reco{border:1px solid #E4E8EE;border-left:5px solid #C3CAD6;border-radius:9px;padding:16px 20px;margin:0 0 11px;background:#fff}
+ .reco.critico{border-left-color:#B3261E}
+ .reco.alto{border-left-color:#C4622B}
+ .reco.medio{border-left-color:#5A6472}
+ .reco .cab{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
+ .reco h4{font-family:Georgia,serif;font-size:1rem;color:#12224A;margin:0 0 5px}
+ .reco p{font-size:.9rem;margin:0;color:#1B2430}
+ .vacio{background:#F4FAF6;border:1px solid #BFE3CC;border-radius:9px;padding:20px 24px;color:#14603A;font-size:.95rem}
+ .btn-imp{display:inline-block;font-family:inherit;font-size:.92rem;font-weight:bold;padding:14px 30px;
+   border-radius:9px;border:0;background:#F2A541;color:#12224A;cursor:pointer}
+ .btn-imp:hover{background:#E09520}
+
+ .sello{display:none}
+ @media print{
+   #como{display:none!important}
+   .sello{display:block;font-size:.82rem;color:#5A6472;border-bottom:1px solid #E4E8EE;
+     padding-bottom:9px;margin:0 0 20px}
+   .marcador{position:static;box-shadow:none;border-bottom:2px solid #12224A;margin-bottom:20px}
+   .ops,.btn-lim,.btn-imp,.no-imp,footer,.barra-aula{display:none!important}
+   .ren{break-inside:avoid;page-break-inside:avoid}
+   .reco{break-inside:avoid;page-break-inside:avoid}
+   .res{background:#fff!important;color:#12224A!important;border:2px solid #12224A}
+   .res h2,.res .gran{color:#12224A!important}
+   .res .lec,.res .desg div{color:#5A6472!important}
+   .res .desg b{color:#12224A!important}
+   header.hero{background:#fff!important;color:#12224A!important;padding:0 0 18px}
+   header.hero h1,.hero .kicker{color:#12224A!important}
+   .hero p.meta,.hero p.sede{color:#5A6472!important}
+   body{font-size:10.5pt}
+   a[href]:after{content:""}
+ }
+</style>
+</head>
+<body>
+<div style="background:#0B172E;font:600 13px/1 Arial,Helvetica,sans-serif"><div style="max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap"><a href="../index.html" style="color:#F2A541;text-decoration:none">← Todos los módulos</a><span style="color:#7D8DB0">Herramientas del curso</span></div></div>
+<header class="hero">
+<div class="wrap">
+<p class="kicker">Antilavado 360 · Diagnóstico de arranque</p>
+<h1>¿Qué tan lejos está su Manual<br/>de lo que pide la reforma?</h1>
+<p class="meta">Dieciocho renglones. Cinco minutos. Calificación en vivo y lista de qué escribir primero.</p>
+<p class="meta">Curso–taller PLD/FT · Actividades Vulnerables</p>
+<div class="citas" style="margin-top:16px">
+<span class="cita L"><i>L</i><span>18 fr. VIII</span></span>
+<span class="cita RCG"><i>RCG</i><span>37</span></span>
+<span class="cita RCG"><i>RCG</i><span>37 Bis</span></span>
+<span class="cita RCG"><i>RCG</i><span>37 Bis 2</span></span>
+</div>
+<p class="sede">GMC360 · 360Educa</p>
+</div>
+</header>
+<div class="wrap">
+<section class="bloque" id="como" style="border-top:none">
+<h2>Cómo se contesta</h2>
+<p class="sub">Conteste sobre el Manual que tiene <b>hoy</b>. Si no tiene ninguno, conteste «No lo tengo» en todo: ése también es un diagnóstico, y es el punto de partida de la mitad de esta sala.</p>
+<div class="grid g4">
+<div class="card"><p class="et">Lo tengo</p><p>Existe el apartado, está escrito con responsable, plazo y evidencia, y se aplica.</p></div>
+<div class="card"><p class="et">A medias</p><p>Existe algo, pero es la ley transcrita, o no dice quién lo hace, o no deja rastro.</p></div>
+<div class="card"><p class="et">No lo tengo</p><p>No hay apartado, o hay un título sin contenido.</p></div>
+<div class="card"><p class="et">No aplica</p><p>Determinó no realizar ese supuesto. Ojo: para quedar exento hay que <b>declararlo en el Manual</b>.</p></div>
+</div>
+<p>«A medias» cuenta como medio punto. «No aplica» sale de la base y no le castiga la calificación.</p>
+<h3>Cómo se asignó la criticidad</h3>
+<p class="sub">Criterio de la casa, no de la norma. Sirve para ordenar el trabajo, no para medir el riesgo de sanción.</p>
+<table>
+<thead><tr><th style="width:15%">Nivel</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><td><span class="et-crit critico">CRÍTICO</span></td><td>La obligación sustantiva <b>ya es exigible hoy</b> —viene del artículo 18 fracciones I a VI, o del artículo 20 de la Ley, en vigor desde el 17 de julio de 2025—. El Manual documenta algo que usted ya debería estar haciendo.</td></tr>
+<tr><td><span class="et-crit alto">ALTO</span></td><td>Exigible con el Manual el 1 de marzo de 2027, y <b>depende de la metodología de riesgos</b> o de un plazo aún más próximo. No se redacta en una tarde.</td></tr>
+<tr><td><span class="et-crit medio">MEDIO</span></td><td>Exigible el 1 de marzo de 2027 y se puede redactar sin insumos externos, en una sesión de trabajo.</td></tr>
+</tbody>
+</table>
+<div class="aviso-priv"><b>Nada se guarda ni se envía.</b> Sus respuestas viven sólo en este navegador y desaparecen al cerrar la pestaña. Si quiere conservar el resultado, use el botón de imprimir al final y guárdelo en PDF.</div>
+</section>
+</div>
+<div class="wrap"><p class="sello" id="sello"></p></div>
+<noscript>
+<div class="wrap"><div class="aviso-priv" style="border-color:#F2A541;background:#FDF3E3;color:#8A5A12">
+<b>Este visor no está ejecutando la calificación automática.</b> Las dieciocho preguntas se leen igual, pero no se suma el resultado ni aparece la lista de recomendaciones. Ábralo en Safari, Chrome o Edge —o desde el aula— y la calificación funciona sola.
+</div></div>
+</noscript>
+<div class="marcador"><div class="wrap">
+<span class="cuenta" id="cuenta">Dieciocho apartados por contestar</span>
+<div class="barra"><i id="pb"></i></div>
+<span class="sem" id="sem">Sin empezar</span>
+<button class="btn-lim" onclick="limpiar()">Limpiar</button>
+</div></div>
+<div class="wrap">
+<div id="lista">
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 · 3er párr.</span></div><h3>El diseño de la metodología de evaluación de Riesgos</h3><p class="pide">El Manual —o el documento al que remita— debe incluir el diseño de la metodología del Capítulo II Quáter: qué elementos e indicadores usa, cómo pondera y cada cuándo se revisa.</p><p class="fun">RCG 37, tercer párrafo</p><div class="ops"><button data-v="si" onclick="marca('m1','si')">Lo tengo</button><button data-v="pa" onclick="marca('m1','pa')">A medias</button><button data-v="no" onclick="marca('m1','no')">No lo tengo</button><button data-v="na" onclick="marca('m1','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 · 3er párr.</span></div><h3>Apertura, limitación o terminación de relaciones</h3><p class="pide">Procedimiento y criterios para decidir cuándo se abre, se limita o se termina una relación con un Cliente o Usuaria, congruentes con la metodología.</p><p class="fun">RCG 37, tercer párrafo</p><div class="ops"><button data-v="si" onclick="marca('m2','si')">Lo tengo</button><button data-v="pa" onclick="marca('m2','pa')">A medias</button><button data-v="no" onclick="marca('m2','no')">No lo tengo</button><button data-v="na" onclick="marca('m2','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit critico">CRÍTICO</span><span class="et-fr">37 Bis fr. I · identificación</span></div><h3>Criterios de IDENTIFICACIÓN del Cliente o Usuaria</h3><p class="pide">Cómo integra el expediente: umbrales, supuestos, qué datos y qué documentos pide según el tipo de Cliente y el anexo aplicable a su fracción, y cómo verifica y actualiza esa información.</p><p class="fun">RCG 37 Bis fr. I, primera parte · Ley art. 18 fr. I · RCG arts. 11 a 23 (Capítulo III)</p><div class="ops"><button data-v="si" onclick="marca('f1a','si')">Lo tengo</button><button data-v="pa" onclick="marca('f1a','pa')">A medias</button><button data-v="no" onclick="marca('f1a','no')">No lo tengo</button><button data-v="na" onclick="marca('f1a','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. I · conocimiento</span></div><h3>Política de CONOCIMIENTO del Cliente o Usuaria</h3><p class="pide">Cosa distinta de identificar. Es la política del Capítulo III Ter: mitigantes ajustados a la metodología, procedimientos de seguimiento y monitoreo, el Perfil transaccional de cada Cliente, los supuestos en que una operación se aparta de ese perfil, y los criterios para establecer o modificar el Grado de Riesgo.</p><p class="fun">RCG 37 Bis fr. I, segunda parte · RCG art. 23 Ter, fracciones I a V y párrafo final · Ley art. 18 fr. I</p><div class="ops"><button data-v="si" onclick="marca('f1b','si')">Lo tengo</button><button data-v="pa" onclick="marca('f1b','pa')">A medias</button><button data-v="no" onclick="marca('f1b','no')">No lo tengo</button><button data-v="na" onclick="marca('f1b','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. II</span></div><h3>Mecanismos de clasificación de Riesgo</h3><p class="pide">La herramienta con la que asigna Grado de Riesgo, su periodicidad y la salida que produce.</p><p class="fun">RCG 37 Bis fr. II · Capítulo III Bis</p><div class="ops"><button data-v="si" onclick="marca('f2','si')">Lo tengo</button><button data-v="pa" onclick="marca('f2','pa')">A medias</button><button data-v="no" onclick="marca('f2','no')">No lo tengo</button><button data-v="na" onclick="marca('f2','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. III</span></div><h3>Medidas de debida diligencia por Grado de Riesgo</h3><p class="pide">Qué se hace de más en cada grado, enunciado grado por grado: bajo, medio y alto.</p><p class="fun">RCG 37 Bis fr. III · arts. 23 Ter 3 y 23 Ter 4</p><div class="ops"><button data-v="si" onclick="marca('f3','si')">Lo tengo</button><button data-v="pa" onclick="marca('f3','pa')">A medias</button><button data-v="no" onclick="marca('f3','no')">No lo tengo</button><button data-v="na" onclick="marca('f3','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. IV</span></div><h3>Procedimientos para PEP e identificación reforzada</h3><p class="pide">Cómo identifica a una Persona Políticamente Expuesta, cómo le da seguimiento reforzado, y qué pasa cuando además sale de Grado de Riesgo alto.</p><p class="fun">RCG 37 Bis fr. IV · art. 23 Ter 5 · Ley art. 18 fr. VIII</p><div class="ops"><button data-v="si" onclick="marca('f4','si')">Lo tengo</button><button data-v="pa" onclick="marca('f4','pa')">A medias</button><button data-v="no" onclick="marca('f4','no')">No lo tengo</button><button data-v="na" onclick="marca('f4','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. V</span></div><h3>Mecanismos para detectar operaciones fuera del Perfil</h3><p class="pide">El sistema de alertas, sus reglas y qué genera al dispararse.</p><p class="fun">RCG 37 Bis fr. V · arts. 23 Ter 1 y 23 Ter 2</p><div class="ops"><button data-v="si" onclick="marca('f5','si')">Lo tengo</button><button data-v="pa" onclick="marca('f5','pa')">A medias</button><button data-v="no" onclick="marca('f5','no')">No lo tengo</button><button data-v="na" onclick="marca('f5','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit critico">CRÍTICO</span><span class="et-fr">37 Bis fr. VI</span></div><h3>Procedimientos de presentación de Avisos e Informes</h3><p class="pide">Quién arma el Aviso, quién lo revisa, quién lo envía, en qué plazo y dónde queda el acuse.</p><p class="fun">RCG 37 Bis fr. VI · Ley arts. 18 fr. VI y 23 · RCG art. 24 Bis 1</p><div class="ops"><button data-v="si" onclick="marca('f6','si')">Lo tengo</button><button data-v="pa" onclick="marca('f6','pa')">A medias</button><button data-v="no" onclick="marca('f6','no')">No lo tengo</button><button data-v="na" onclick="marca('f6','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit critico">CRÍTICO</span><span class="et-fr">37 Bis fr. VII</span></div><h3>Mecanismos de conservación de información</h3><p class="pide">Repositorio, plazos por tipo de documento y control de acceso.</p><p class="fun">RCG 37 Bis fr. VII · Ley art. 18 fr. IV · Reglamento art. 20</p><div class="ops"><button data-v="si" onclick="marca('f7','si')">Lo tengo</button><button data-v="pa" onclick="marca('f7','pa')">A medias</button><button data-v="no" onclick="marca('f7','no')">No lo tengo</button><button data-v="na" onclick="marca('f7','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit critico">CRÍTICO</span><span class="et-fr">37 Bis fr. VIII</span></div><h3>Mecanismos de seguimiento y acumulación</h3><p class="pide">El sistema que acumula por Cliente y por tipo de acto, el periodo y la alerta al alcanzar el umbral.</p><p class="fun">RCG 37 Bis fr. VIII · Ley art. 17 penúltimo párr. · Reglamento art. 7 · RCG art. 19</p><div class="ops"><button data-v="si" onclick="marca('f8','si')">Lo tengo</button><button data-v="pa" onclick="marca('f8','pa')">A medias</button><button data-v="no" onclick="marca('f8','no')">No lo tengo</button><button data-v="na" onclick="marca('f8','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. IX</span></div><h3>Mecanismos de identificación en listas</h3><p class="pide">Qué listas de autoridades nacionales u organismos internacionales consulta, con qué frecuencia, y qué hace ante una coincidencia.</p><p class="fun">RCG 37 Bis fr. IX</p><div class="ops"><button data-v="si" onclick="marca('f9','si')">Lo tengo</button><button data-v="pa" onclick="marca('f9','pa')">A medias</button><button data-v="no" onclick="marca('f9','no')">No lo tengo</button><button data-v="na" onclick="marca('f9','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit critico">CRÍTICO</span><span class="et-fr">37 Bis fr. X</span></div><h3>Funciones y responsabilidades de la Representante</h3><p class="pide">Un listado de facultades y deberes de la persona Representante Encargada de Cumplimiento. No un párrafo genérico.</p><p class="fun">RCG 37 Bis fr. X · Ley art. 20 · RCG art. 10</p><div class="ops"><button data-v="si" onclick="marca('f10','si')">Lo tengo</button><button data-v="pa" onclick="marca('f10','pa')">A medias</button><button data-v="no" onclick="marca('f10','no')">No lo tengo</button><button data-v="na" onclick="marca('f10','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit alto">ALTO</span><span class="et-fr">37 Bis fr. XI</span></div><h3>Programas de capacitación</h3><p class="pide">Destinatarios, temas, periodicidad, quién imparte y cómo se acredita.</p><p class="fun">RCG 37 Bis fr. XI · Ley art. 18 fr. IX · RCG arts. 39 Bis y 39 Bis 1</p><div class="ops"><button data-v="si" onclick="marca('f11','si')">Lo tengo</button><button data-v="pa" onclick="marca('f11','pa')">A medias</button><button data-v="no" onclick="marca('f11','no')">No lo tengo</button><button data-v="na" onclick="marca('f11','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit medio">MEDIO</span><span class="et-fr">37 Bis fr. XII</span></div><h3>Mecanismos de control interno, supervisión y auditoría</h3><p class="pide">Quién revisa a quién, cada cuándo y qué informe produce.</p><p class="fun">RCG 37 Bis fr. XII · RCG arts. 42 a 51</p><div class="ops"><button data-v="si" onclick="marca('f12','si')">Lo tengo</button><button data-v="pa" onclick="marca('f12','pa')">A medias</button><button data-v="no" onclick="marca('f12','no')">No lo tengo</button><button data-v="na" onclick="marca('f12','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit medio">MEDIO</span><span class="et-fr">37 Bis fr. XIII</span></div><h3>Medidas para garantizar la confidencialidad</h3><p class="pide">Controles de acceso, deber de reserva y consecuencia de su violación.</p><p class="fun">RCG 37 Bis fr. XIII · Ley arts. 38 y 41</p><div class="ops"><button data-v="si" onclick="marca('f13','si')">Lo tengo</button><button data-v="pa" onclick="marca('f13','pa')">A medias</button><button data-v="no" onclick="marca('f13','no')">No lo tengo</button><button data-v="na" onclick="marca('f13','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit medio">MEDIO</span><span class="et-fr">37 Bis fr. XIV</span></div><h3>Procedimientos de actualización del propio Manual</h3><p class="pide">Disparadores, responsable, plazo y control de versiones.</p><p class="fun">RCG 37 Bis fr. XIV · RCG arts. 10 Septies 3 y 37 Bis 3</p><div class="ops"><button data-v="si" onclick="marca('f14','si')">Lo tengo</button><button data-v="pa" onclick="marca('f14','pa')">A medias</button><button data-v="no" onclick="marca('f14','no')">No lo tengo</button><button data-v="na" onclick="marca('f14','na')">No aplica</button></div></div>
+<div class="ren"><div class="cab"><span class="et-crit medio">MEDIO</span><span class="et-fr">37 Bis 2</span></div><h3>Declaración de los supuestos que NO realiza</h3><p class="pide">Hacer constar en el Manual qué actos u operaciones ha determinado no realizar, para quedar exento de escribir políticas sobre ellos.</p><p class="fun">RCG art. 37 Bis 2</p><div class="ops"><button data-v="si" onclick="marca('m3','si')">Lo tengo</button><button data-v="pa" onclick="marca('m3','pa')">A medias</button><button data-v="no" onclick="marca('m3','no')">No lo tengo</button><button data-v="na" onclick="marca('m3','na')">No aplica</button></div></div>
+</div>
+<div id="resultado"></div>
+<p class="no-imp" style="text-align:center;margin:10px 0 40px">
+<button class="btn-imp" onclick="window.print()">Imprimir o guardar en PDF</button>
+</p>
+<p class="aviso">Formación continua. Este curso–taller no otorga certificación alguna.<br/>
+  Este diagnóstico es material de análisis y capacitación. No es asesoría legal, no es interpretación oficial y no sustituye el criterio de la autoridad competente. Las citas corresponden a la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita (última reforma DOF 16-07-2025), su Reglamento (DOF 27-03-2026) y las Reglas de Carácter General en el texto compilado que publica la Secretaría, con la reforma del ACUERDO 115/2026 (DOF 07-08-2026). El Capítulo X, sobre el Manual de Políticas Internas, es exigible con la metodología incorporada a partir del 1 de marzo de 2027 conforme al Transitorio Tercero.</p>
+</div>
+<footer>
+<div class="wrap">
+<b>Antilavado 360 · de la Ley a la práctica</b>
+    GMC360 · 360Educa · 1 de septiembre de 2026
+  </div>
+</footer>
+<script>
+// 17 renglones: 14 fracciones del RCG 37 Bis + 3 exigencias del art. 37 y 37 Bis 2
+var DATA=[
+{id:"m1",g:"Base",fr:"37 · 3er párr.",tit:"El diseño de la metodología de evaluación de Riesgos",
+ reg:"Documento",crit:"alto",
+ pide:"El Manual —o el documento al que remita— debe incluir el diseño de la metodología del Capítulo II Quáter: qué elementos e indicadores usa, cómo pondera y cada cuándo se revisa.",
+ fund:"RCG 37, tercer párrafo",
+ rec:"Es el insumo de todo lo demás: el Manual gestiona el Riesgo «de acuerdo con los resultados» de esta metodología. Si no está, los apartados de riesgo del Manual quedan en el aire. Sale de la matriz de riesgos (Módulo 8)."},
+{id:"m2",g:"Base",fr:"37 · 3er párr.",tit:"Apertura, limitación o terminación de relaciones",
+ reg:"Procedimiento",crit:"alto",
+ pide:"Procedimiento y criterios para decidir cuándo se abre, se limita o se termina una relación con un Cliente o Usuaria, congruentes con la metodología.",
+ fund:"RCG 37, tercer párrafo",
+ rec:"Es exigencia expresa y casi nadie la tiene escrita. Necesita quién decide, con qué causales, en qué plazo y qué se le comunica al Cliente."},
+{id:"f1a",g:"I",fr:"37 Bis fr. I · identificación",tit:"Criterios de IDENTIFICACIÓN del Cliente o Usuaria",
+ reg:"Criterio",crit:"critico",
+ pide:"Cómo integra el expediente: umbrales, supuestos, qué datos y qué documentos pide según el tipo de Cliente y el anexo aplicable a su fracción, y cómo verifica y actualiza esa información.",
+ fund:"RCG 37 Bis fr. I, primera parte · Ley art. 18 fr. I · RCG arts. 11 a 23 (Capítulo III)",
+ rec:"Es la obligación más antigua del régimen y la que casi todos ya traen: lleva años integrando expedientes. Aquí el Manual sólo tiene que documentar por escrito lo que ya hace. Si marcó «a medias», casi siempre es porque el procedimiento existe en la práctica pero no está redactado con responsable, plazo y evidencia."},
+{id:"f1b",g:"I",fr:"37 Bis fr. I · conocimiento",tit:"Política de CONOCIMIENTO del Cliente o Usuaria",
+ reg:"Política",crit:"alto",
+ pide:"Cosa distinta de identificar. Es la política del Capítulo III Ter: mitigantes ajustados a la metodología, procedimientos de seguimiento y monitoreo, el Perfil transaccional de cada Cliente, los supuestos en que una operación se aparta de ese perfil, y los criterios para establecer o modificar el Grado de Riesgo.",
+ fund:"RCG 37 Bis fr. I, segunda parte · RCG art. 23 Ter, fracciones I a V y párrafo final · Ley art. 18 fr. I",
+ rec:"Éste es el hueco grande del sector, y se confunde con el anterior. Identificar es saber QUIÉN es; conocer es saber QUÉ HACE y detectar cuándo se sale de su patrón. Es capítulo nuevo, aplica a las operaciones realizadas a partir del 1 de marzo de 2027, y el propio artículo 23 Ter ordena que esta política esté INTEGRADA en el Manual. Tener el expediente impecable no cubre este renglón."},
+{id:"f2",g:"II",fr:"37 Bis fr. II",tit:"Mecanismos de clasificación de Riesgo",
+ reg:"Mecanismo",crit:"alto",
+ pide:"La herramienta con la que asigna Grado de Riesgo, su periodicidad y la salida que produce.",
+ fund:"RCG 37 Bis fr. II · Capítulo III Bis",
+ rec:"Depende de la metodología: no se escribe antes de tenerla. Señale la herramienta, cada cuándo corre y dónde queda registrado el grado asignado."},
+{id:"f3",g:"III",fr:"37 Bis fr. III",tit:"Medidas de debida diligencia por Grado de Riesgo",
+ reg:"Medida",crit:"alto",
+ pide:"Qué se hace de más en cada grado, enunciado grado por grado: bajo, medio y alto.",
+ fund:"RCG 37 Bis fr. III · arts. 23 Ter 3 y 23 Ter 4",
+ rec:"El error típico es un párrafo genérico. Tiene que leerse como tres listas distintas, una por grado, y la de grado alto incluye el cuestionario de origen y destino de recursos."},
+{id:"f4",g:"IV",fr:"37 Bis fr. IV",tit:"Procedimientos para PEP e identificación reforzada",
+ reg:"Procedimiento",crit:"alto",
+ pide:"Cómo identifica a una Persona Políticamente Expuesta, cómo le da seguimiento reforzado, y qué pasa cuando además sale de Grado de Riesgo alto.",
+ fund:"RCG 37 Bis fr. IV · art. 23 Ter 5 · Ley art. 18 fr. VIII",
+ rec:"El artículo 23 Ter 5 remite tres veces a «lo que se establezca en su Manual»: qué directivo aprueba, con qué formato, en qué plazo y qué pasa si no aprueba. Sin ese apartado, el formato no opera. Está desarrollado entero en el apartado 6 de la Guía de redacción."},
+{id:"f5",g:"V",fr:"37 Bis fr. V",tit:"Mecanismos para detectar operaciones fuera del Perfil",
+ reg:"Mecanismo",crit:"alto",
+ pide:"El sistema de alertas, sus reglas y qué genera al dispararse.",
+ fund:"RCG 37 Bis fr. V · arts. 23 Ter 1 y 23 Ter 2",
+ rec:"Necesita Perfil transaccional construido antes. Diga qué dispara la alerta, quién la atiende, en cuánto tiempo y qué documento deja el cierre de cada alerta."},
+{id:"f6",g:"VI",fr:"37 Bis fr. VI",tit:"Procedimientos de presentación de Avisos e Informes",
+ reg:"Procedimiento",crit:"critico",
+ pide:"Quién arma el Aviso, quién lo revisa, quién lo envía, en qué plazo y dónde queda el acuse.",
+ fund:"RCG 37 Bis fr. VI · Ley arts. 18 fr. VI y 23 · RCG art. 24 Bis 1",
+ rec:"Los Avisos ya se presentan hoy y el plazo del día 17 ya corre. Si el procedimiento no está escrito, el día que falte la persona que lo hace no hay quien lo ejecute. Éste es el apartado más barato de escribir y el más caro de no tener."},
+{id:"f7",g:"VII",fr:"37 Bis fr. VII",tit:"Mecanismos de conservación de información",
+ reg:"Mecanismo",crit:"critico",
+ pide:"Repositorio, plazos por tipo de documento y control de acceso.",
+ fund:"RCG 37 Bis fr. VII · Ley art. 18 fr. IV · Reglamento art. 20",
+ rec:"Son TRES plazos de diez años con tres fechas de arranque distintas, y confundirlos es el error más común: el expediente cuenta desde la realización de la Actividad Vulnerable; los Avisos y acuses, desde su presentación; la evidencia de capacitación, por evento. Si su política de archivo tiene una sola fecha de purga, está mal construida."},
+{id:"f8",g:"VIII",fr:"37 Bis fr. VIII",tit:"Mecanismos de seguimiento y acumulación",
+ reg:"Mecanismo",crit:"critico",
+ pide:"El sistema que acumula por Cliente y por tipo de acto, el periodo y la alerta al alcanzar el umbral.",
+ fund:"RCG 37 Bis fr. VIII · Ley art. 17 penúltimo párr. · Reglamento art. 7 · RCG art. 19",
+ rec:"La acumulación ya opera hoy y el Aviso se presenta al alcanzar el umbral, aunque no se hayan agotado los seis meses. Hasta el 1 de junio de 2027 el mecanismo puede ser manual, pero tiene que existir, estar escrito y dejar registro."},
+{id:"f9",g:"IX",fr:"37 Bis fr. IX",tit:"Mecanismos de identificación en listas",
+ reg:"Mecanismo",crit:"alto",
+ pide:"Qué listas de autoridades nacionales u organismos internacionales consulta, con qué frecuencia, y qué hace ante una coincidencia.",
+ fund:"RCG 37 Bis fr. IX",
+ rec:"Es la fracción que más se olvida. Diga las listas por su nombre, la periodicidad de la consulta, y sobre todo el procedimiento de coincidencia: quién resuelve si hay identidad, con qué datos y en cuánto tiempo."},
+{id:"f10",g:"X",fr:"37 Bis fr. X",tit:"Funciones y responsabilidades de la Representante",
+ reg:"Funciones",crit:"critico",
+ pide:"Un listado de facultades y deberes de la persona Representante Encargada de Cumplimiento. No un párrafo genérico.",
+ fund:"RCG 37 Bis fr. X · Ley art. 20 · RCG art. 10",
+ rec:"El artículo 20 está en vigor desde el 17 de julio de 2025 y su segundo párrafo es el que muerde: mientras no haya Representante o la designación no sea aceptada, el cumplimiento corresponde al órgano de administración o al administrador único. Verifique hoy mismo en el Portal la fecha de ACEPTACIÓN, no la de designación."},
+{id:"f11",g:"XI",fr:"37 Bis fr. XI",tit:"Programas de capacitación",
+ reg:"Programa",crit:"alto",
+ pide:"Destinatarios, temas, periodicidad, quién imparte y cómo se acredita.",
+ fund:"RCG 37 Bis fr. XI · Ley art. 18 fr. IX · RCG arts. 39 Bis y 39 Bis 1",
+ rec:"El primer periodo anual corre del 1 de enero al 31 de diciembre de 2027 —arranca DOS MESES ANTES que el Manual—. Y la constancia sin evaluación previa no cumple: el Manual debe fijar qué se hace con quien no obtenga resultado satisfactorio. Quien imparte necesita cinco años de experiencia acreditados."},
+{id:"f12",g:"XII",fr:"37 Bis fr. XII",tit:"Mecanismos de control interno, supervisión y auditoría",
+ reg:"Mecanismo",crit:"medio",
+ pide:"Quién revisa a quién, cada cuándo y qué informe produce.",
+ fund:"RCG 37 Bis fr. XII · RCG arts. 42 a 51",
+ rec:"El primer periodo de revisión es 2028 y el primer dictamen se entrega el último día hábil de marzo de 2029, así que hay tiempo. Lo que sí conviene fijar desde ahora es la independencia del área de auditoría interna respecto de la Representante."},
+{id:"f13",g:"XIII",fr:"37 Bis fr. XIII",tit:"Medidas para garantizar la confidencialidad",
+ reg:"Medida",crit:"medio",
+ pide:"Controles de acceso, deber de reserva y consecuencia de su violación.",
+ fund:"RCG 37 Bis fr. XIII · Ley arts. 38 y 41",
+ rec:"Se redacta en una sesión de trabajo y casi nadie lo tiene. Incluya quién tiene acceso a los Avisos, bajo qué compromiso firmado, y qué pasa si alguien avisa al Cliente de que se presentó un Aviso."},
+{id:"f14",g:"XIV",fr:"37 Bis fr. XIV",tit:"Procedimientos de actualización del propio Manual",
+ reg:"Procedimiento",crit:"medio",
+ pide:"Disparadores, responsable, plazo y control de versiones.",
+ fund:"RCG 37 Bis fr. XIV · RCG arts. 10 Septies 3 y 37 Bis 3",
+ rec:"Los disparadores que conviene dejar escritos: reforma de la norma, resultados de la evaluación anual de Riesgos, actualización de la Evaluación Nacional, cambio de Representante, observaciones de auditoría, empezar a realizar un supuesto antes declarado como no realizado, y orden expresa del SAT."},
+{id:"m3",g:"37 Bis 2",fr:"37 Bis 2",tit:"Declaración de los supuestos que NO realiza",
+ reg:"Declaración",crit:"medio",
+ pide:"Hacer constar en el Manual qué actos u operaciones ha determinado no realizar, para quedar exento de escribir políticas sobre ellos.",
+ fund:"RCG art. 37 Bis 2",
+ rec:"Es el apartado que más páginas ahorra y el que casi nadie tiene. La exención depende de la declaración expresa: el silencio no exenta, obliga. Y cae en el momento en que decida realizar ese acto, para lo cual la política debe estar escrita ANTES de la primera operación."}
+];
+
+var estado = {};
+var NOM = {si:'Lo tengo', pa:'A medias', no:'No lo tengo', na:'No aplica'};
+var CRITNOM = {critico:'CRÍTICO', alto:'ALTO', medio:'MEDIO'};
+var ORDEN = {critico:0, alto:1, medio:2};
+
+function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function pinta(){
+  document.getElementById('lista').innerHTML = DATA.map(function(d){
+    var v = estado[d.id] || '';
+    return '<div class="ren ' + v + '">' +
+      '<div class="cab">' +
+        '<span class="et-crit ' + d.crit + '">' + CRITNOM[d.crit] + '</span>' +
+        '<span class="et-fr">' + esc(d.fr) + '</span>' +
+      '</div>' +
+      '<h3>' + esc(d.tit) + '</h3>' +
+      '<p class="pide">' + esc(d.pide) + '</p>' +
+      '<p class="fun">' + esc(d.fund) + '</p>' +
+      '<div class="ops">' +
+        ['si','pa','no','na'].map(function(o){
+          return '<button data-v="' + o + '" class="' + (v === o ? 'sel' : '') + '" onclick="marca(\'' + d.id + '\',\'' + o + '\')">' + NOM[o] + '</button>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  }).join('');
+  califica();
+}
+
+function marca(id, v){ estado[id] = (estado[id] === v ? '' : v); pinta(); }
+function limpiar(){ estado = {}; pinta(); window.scrollTo({top:0, behavior:'smooth'}); }
+
+function califica(){
+  var base=0, si=0, pa=0, no=0, na=0, sin=0;
+  DATA.forEach(function(d){
+    var v = estado[d.id] || '';
+    if(v === 'na'){ na++; return; }
+    base++;
+    if(v === 'si') si++;
+    else if(v === 'pa') pa++;
+    else if(v === 'no') no++;
+    else sin++;
+  });
+  var pct = base ? Math.round(((si + pa*0.5) / base) * 100) : 0;
+
+  document.getElementById('cuenta').textContent = si + ' de ' + base + ' apartados completos';
+  document.getElementById('pb').style.width = pct + '%';
+
+  var s = document.getElementById('sem');
+  if(sin > 0){
+    s.textContent = 'Faltan ' + sin + ' por contestar';
+    s.style.background = '#6B7480';
+    document.getElementById('pb').style.background = '#C3CAD6';
+  } else {
+    document.getElementById('pb').style.background = pct >= 90 ? '#1E7A4C' : (pct >= 60 ? '#C4622B' : '#B3261E');
+    if(pct >= 90){ s.textContent = 'VERDE · ' + pct + '%'; s.style.background = '#1E7A4C'; }
+    else if(pct >= 60){ s.textContent = 'ÁMBAR · ' + pct + '%'; s.style.background = '#C4622B'; }
+    else { s.textContent = 'ROJO · ' + pct + '%'; s.style.background = '#B3261E'; }
+  }
+  var sel = document.getElementById('sello');
+  if(sel){
+    var f = new Date();
+    var M = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    sel.innerHTML = '<b>Diagnóstico del Manual de Políticas Internas</b> · Curso–taller PLD/FT · ' +
+      'Contestado el ' + f.getDate() + ' de ' + M[f.getMonth()] + ' de ' + f.getFullYear() +
+      ' · Documento generado por la persona que lo contestó; no lo emite ni lo valida GMC360.';
+  }
+  resultado(pct, base, si, pa, no, na, sin);
+}
+
+function resultado(pct, base, si, pa, no, na, sin){
+  var caja = document.getElementById('resultado');
+  if(sin > 0){
+    caja.innerHTML = '<p class="sub" style="text-align:center;margin:30px 0">Conteste los ' + sin +
+      ' apartados que faltan y aquí aparecen su calificación y su lista de trabajo.</p>';
+    return;
+  }
+  var lectura;
+  if(pct >= 90) lectura = 'Su Manual está sustancialmente completo. Lo que queda es afinar redacción y evidencia.';
+  else if(pct >= 60) lectura = 'Su Manual tiene huecos identificables. La lista de abajo dice cuáles y en qué orden cerrarlos.';
+  else lectura = 'Su Manual no resistiría hoy una verificación. No es motivo de alarma: para eso está el plazo del 1 de marzo de 2027, y para eso sirve este diagnóstico.';
+
+  var pend = DATA.filter(function(d){ var v = estado[d.id]; return v === 'no' || v === 'pa'; })
+                 .sort(function(a,b){ return ORDEN[a.crit] - ORDEN[b.crit]; });
+
+  var cr = pend.filter(function(d){ return d.crit === 'critico'; }).length;
+
+  var html = '<div class="res">' +
+    '<h2>Su diagnóstico</h2>' +
+    '<div class="gran">' + pct + '%</div>' +
+    '<p class="lec">' + lectura + '</p>' +
+    '<div class="desg">' +
+      '<div><b>' + si + '</b>lo tengo</div>' +
+      '<div><b>' + pa + '</b>a medias</div>' +
+      '<div><b>' + no + '</b>no lo tengo</div>' +
+      '<div><b>' + na + '</b>no aplica</div>' +
+      (cr ? '<div><b>' + cr + '</b>de criticidad crítica</div>' : '') +
+    '</div></div>';
+
+  if(!pend.length){
+    html += '<div class="vacio"><b>No hay recomendaciones pendientes.</b> Los dieciocho renglones salieron en «lo tengo» o en «no aplica». Si marcó alguno como no aplica, verifique que esté <b>declarado por escrito</b> en su Manual: el artículo 37 Bis 2 condiciona la exención a esa declaración.</div>';
+  } else {
+    html += '<h2 style="margin-top:34px">Qué escribir primero</h2>' +
+            '<p class="sub">' + pend.length + ' apartados por trabajar, ordenados por criticidad.' +
+            (cr ? ' Los ' + cr + ' marcados en rojo primero: su obligación sustantiva ya es exigible hoy.' : '') + '</p>' +
+            '<div class="recos">' +
+      pend.map(function(d, i){
+        return '<div class="reco ' + d.crit + '">' +
+          '<div class="cab">' +
+            '<span class="et-crit ' + d.crit + '">' + CRITNOM[d.crit] + '</span>' +
+            '<span class="et-fr">' + esc(d.fr) + '</span>' +
+            '<span class="et-reg">' + (estado[d.id] === 'pa' ? 'A MEDIAS' : 'NO LO TENGO') + '</span>' +
+          '</div>' +
+          '<h4>' + (i+1) + '. ' + esc(d.tit) + '</h4>' +
+          '<p>' + esc(d.rec) + '</p>' +
+        '</div>';
+      }).join('') + '</div>';
+  }
+  caja.innerHTML = html;
+}
+
+pinta();
+</script>
+</body>
+</html>

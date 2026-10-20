@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html lang="es-MX">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Umbrales y calculadora · Curso PLD/FT Actividades Vulnerables</title>
+<meta content="Guía completa y gratuita de las nuevas Reglas de Carácter General de la LFPIORPI: calendario de exigibilidad con fundamento, definiciones, las 17 actividades vulnerables con umbrales, el articulado capítulo por capítulo, calculadora y los siete errores de lectura que ya circulan." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Guía completa del ACUERDO 115/2026 · Nuevas Reglas de la LFPIORPI" property="og:title"/>
+<meta content="Calendario con fundamento artículo por artículo, definiciones, las 17 actividades vulnerables, calculadora de umbrales y los siete errores de lectura que ya circulan. Gratis y sin registro." property="og:description"/>
+
+<meta content="es_MX" property="og:locale"/>
+<meta content="index,follow" name="robots"/>
+<meta content="#12224A" name="theme-color"/>
+<style>
+:root{
+  --navy:#12224A; --navy2:#1E2761; --navy3:#1B3061;
+  --ice:#CADCFC; --amber:#F2A541; --red:#C1443C; --green:#2E7D5B;
+  --gray:#5A6472; --light:#F4F6FA; --ink:#16202E; --line:#E2E7F0;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Calibri,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:34px 28px 26px}
+.wrap{max-width:1180px;margin:0 auto}
+.kick{color:var(--amber);font-size:12px;font-weight:700;letter-spacing:2.5px;margin:0 0 10px}
+h1{font-family:Cambria,Georgia,serif;font-size:34px;margin:0 0 8px;line-height:1.2}
+header p.sub{color:var(--ice);margin:0;font-size:16px}
+.counter{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.cbox{background:var(--navy3);border-radius:10px;padding:14px 20px;min-width:150px}
+.cbox .n{font-family:Cambria,Georgia,serif;font-size:36px;font-weight:700;color:var(--amber);line-height:1}
+.cbox .l{color:var(--ice);font-size:12px;margin-top:6px}
+nav{background:var(--navy2);position:sticky;top:0;z-index:10}
+nav .wrap{display:flex;flex-wrap:wrap}
+nav button{background:none;border:0;color:#B9C7E6;padding:14px 18px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;border-bottom:3px solid transparent}
+nav button:hover{color:#fff}
+nav button.on{color:#fff;border-bottom-color:var(--amber);background:rgba(255,255,255,.06)}
+main{padding:28px}
+section{display:none}
+section.on{display:block}
+h2{font-family:Cambria,Georgia,serif;font-size:26px;color:var(--navy);margin:0 0 6px}
+.lead{color:var(--gray);margin:0 0 22px;font-size:15px;max-width:900px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:8px}
+th{background:var(--navy2);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:13px}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--light)}
+.pill{display:inline-block;padding:2px 9px;border-radius:11px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap}
+.p-navy{background:var(--navy)} .p-amber{background:#9C6516} .p-blue{background:#2A6F97}
+.p-purple{background:#7A5AA6} .p-green{background:var(--green)} .p-gray{background:#6B7480}
+.p-red{background:#A6322B}
+.tl{border-left:3px solid var(--line);margin-left:14px;padding-left:24px}
+.tl .item{position:relative;padding-bottom:26px}
+.tl .item::before{content:"";position:absolute;left:-33px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--amber);border:3px solid #fff;box-shadow:0 0 0 2px var(--amber)}
+.tl .d{font-weight:700;color:var(--navy);font-size:17px}
+.tl .f{color:var(--gray);font-size:12px;margin:2px 0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--light);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h3{margin:0 0 8px;font-size:15px;color:var(--navy)}
+.card p{margin:0;font-size:13.5px}
+.err{border-left:5px solid var(--red);background:#FBF2F1;border-radius:8px;padding:16px 18px;margin-bottom:14px}
+.err .q{color:var(--red);font-weight:700;font-style:italic;margin:0 0 6px;font-size:15px}
+.err .a{margin:0;font-size:14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+input[type=search],select{font-family:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;min-width:230px}
+.chk{display:flex;gap:12px;align-items:flex-start;background:var(--light);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.chk input{width:20px;height:20px;margin-top:2px;flex:none;cursor:pointer}
+.chk .t{font-weight:700;color:var(--navy);font-size:15px}
+.chk .b{font-size:13.5px;color:var(--ink);margin-top:3px}
+.chk.done{opacity:.5}
+.chk.done .t{text-decoration:line-through}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:6px 0 20px}
+.bar div{height:100%;background:var(--green);width:0;transition:width .25s}
+.note{background:#FDF3E3;border:1px solid var(--amber);border-radius:10px;padding:16px 18px;font-size:14px;color:#6B4A12;margin:18px 0}
+.note b{color:#8A5A12}
+footer{background:var(--navy);color:#8FA4C9;padding:26px 28px;font-size:12.5px;margin-top:30px}
+footer b{color:#fff}
+.small{font-size:12px;color:var(--gray)}
+.rojo{color:var(--red)}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:18px 0}
+.step{background:var(--light);border:1px solid var(--line);border-radius:11px;padding:16px}
+.step.last{background:var(--navy);border-color:var(--navy)}
+.step .f{color:#9C6516;font-weight:800;font-size:12px;letter-spacing:1px}
+.step.last .f{color:var(--amber)}
+.step h4{font-family:Cambria,Georgia,serif;font-size:23px;margin:4px 0 8px;color:var(--navy)}
+.step.last h4{color:#fff}
+.step p{margin:0 0 8px;font-size:13px;font-weight:600}
+.step.last p{color:var(--ice)}
+.step small{font-size:12px;color:var(--gray);line-height:1.45;display:block}
+.step.last small{color:#C6D2E8}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;background:var(--navy);border-radius:12px;padding:22px;margin:18px 0}
+.stats div .n{font-family:Cambria,Georgia,serif;font-size:44px;font-weight:bold;color:var(--amber);line-height:1}
+.stats div .l{color:#D7DEEA;font-size:12px;margin-top:6px;line-height:1.4}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+.panel{border-radius:11px;padding:18px}
+.panel.old{background:#F2F4F8;border:1px solid #DDE3EE}
+.panel.new{background:var(--navy);color:var(--ice)}
+.panel h4{margin:0 0 8px;font-size:12.5px;letter-spacing:1.4px;font-weight:800;color:var(--gray)}
+.panel.new h4{color:var(--amber)}
+.gafi{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:12px 0}
+.gafi span{padding:12px 8px;border-radius:7px;color:#fff;font-size:12.5px;font-weight:700;text-align:center;line-height:1.3}
+.hitos{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0}
+.hito{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.hito .d{padding:14px 10px;text-align:center;color:#fff;font-family:Cambria,Georgia,serif;font-size:18px;font-weight:bold;line-height:1.25}
+.hito .b{padding:12px;text-align:center}
+.hito .b b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:5px}
+.hito .b small{font-size:11.5px;color:var(--gray);line-height:1.4}
+dl.defs{margin:0}
+dl.defs>div{border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:11px;background:#fff}
+dl.defs dt{font-weight:700;color:var(--navy);font-size:16px;margin-bottom:2px}
+dl.defs .src{font-size:11.5px;color:var(--gray);margin-bottom:7px}
+dl.defs dd{margin:0;font-size:14px}
+.nuevo{display:inline-block;background:#EDF3EE;color:var(--green);font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:2px}
+.ver{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.ver.si{background:#EDF3EE;color:var(--green)}
+.ver.no{background:#FDF3E3;color:#8A5A12}
+.quote{border-left:4px solid var(--amber);background:#FDFAF4;padding:14px 18px;border-radius:0 9px 9px 0;font-size:14.5px;font-style:italic;color:#5A4A2E;margin:16px 0}
+.uma{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;background:var(--navy);color:#fff;padding:16px 18px;border-radius:10px;margin-bottom:18px}
+.uma label{display:block;font-size:11.5px;color:var(--ice);margin-bottom:5px;font-weight:600}
+.uma input{font-family:inherit;font-size:19px;font-weight:bold;padding:8px 11px;border:0;border-radius:7px;width:130px;color:var(--navy)}
+.uma .hint{font-size:11.5px;color:#9FB0CC;max-width:430px;line-height:1.4}
+td.money{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:bold;color:var(--navy)}
+td.uma-n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--gray);font-size:12.5px}
+.acum{background:var(--light);border:1px solid var(--line);border-radius:10px;padding:18px;margin-top:22px}
+.acum h3{margin:0 0 4px;font-size:16px;color:var(--navy);font-family:Cambria,Georgia,serif}
+.acum .row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:12px}
+.acum label{display:block;font-size:11.5px;color:var(--gray);margin-bottom:4px;font-weight:600}
+.acum input,.acum select{font-family:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:7px}
+.acum input{width:150px}.acum select{min-width:300px;max-width:100%}
+#acumres{margin-top:16px;padding:14px 16px;border-radius:8px;font-size:14.5px;line-height:1.45}
+.ok{background:#EDF3EE;border:1px solid var(--green);color:#1E5B41}
+.warn{background:#FDF3E3;border:1px solid var(--amber);color:#6B4A12}
+.bad{background:#FBF2F1;border:1px solid var(--red);color:#8A2B24}
+@media(max-width:640px){h1{font-size:26px}main{padding:18px}}
+
+  /* ── Nomenclatura de ordenamientos ── */
+  .ref{display:inline-block;font-size:.62em;font-weight:700;letter-spacing:.5px;
+       line-height:1;padding:2px 5px;border-radius:4px;margin-left:3px;
+       vertical-align:.28em;white-space:nowrap;font-family:Calibri,"Segoe UI",Arial,sans-serif}
+  .r-l  {background:#E3E9F7;color:#12224A}
+  .r-r  {background:#E4F2EB;color:#245C45}
+  .r-rcg{background:#FDF1DC;color:#8C570D}
+  .r-cpf{background:#F3E6F2;color:#6B2160}
+  .leyenda{background:#fff;border:1px solid #E2E7F0;border-left:5px solid #12224A;
+           border-radius:10px;padding:12px 18px;margin:18px 0;font-size:13.5px;line-height:1.8}
+  .leyenda b{color:#12224A}
+  @media(max-width:600px){ table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch} select,input{max-width:100%;width:100%;box-sizing:border-box} label{max-width:100%} section div{min-width:0} [class*=grid],.row,.calc{grid-template-columns:1fr !important} }
+</style>
+</head>
+<body>
+<div style="background:#0B172E;font:600 13px/1 Arial,Helvetica,sans-serif"><div style="max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap"><a href="../index.html" style="color:#F2A541;text-decoration:none">← Todos los módulos</a><span style="color:#7D8DB0">Herramientas del curso</span></div></div>
+<header>
+<div class="wrap">
+<p class="kick">GMC360 · 360EDUCA</p>
+<h1>Las 17 Actividades Vulnerables, sus umbrales y la calculadora</h1>
+<p class="sub">ACUERDO 115/2026 · Nuevas Reglas de Carácter General · Diario Oficial de la Federación, viernes 7 de agosto de 2026<br/><span style="font-size:13.5px;color:#9FB0CC">Panorama, calendario con fundamento, definiciones, las 17 actividades vulnerables, el articulado completo y las herramientas de trabajo. Material abierto y sin costo.</span></p>
+
+</div>
+<span id="c1" hidden></span><div hidden><div id="prog"></div><p id="progtxt"></p></div><span id="c2" hidden></span></header>
+<nav><div class="wrap">
+
+
+
+<button class="on" data-t="av">Las 17 Actividades</button>
+
+
+
+
+<button class="" data-t="calc">Calculadora</button>
+
+
+
+</div></nav>
+<div class="wrap"><div class="leyenda"><b>Cómo leer las citas.</b> Cada artículo lleva la marca del ordenamiento del que proviene, porque varios números existen en los tres con contenido distinto: <span class="ref r-l">L</span> Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita · <span class="ref r-r">R</span> su Reglamento · <span class="ref r-rcg">RCG</span> Reglas de Carácter General (ACUERDO 115/2026) · <span class="ref r-cpf">CPF</span> Código Penal Federal. Ejemplo: el artículo 21 <span class="ref r-l">L</span> es el deber de abstenerse, y el 21 <span class="ref r-rcg">RCG</span> es la verificación anual de expedientes.</div></div>
+<main class="wrap">
+<!-- ================= PANORAMA ================= -->
+
+<!-- ================= CALENDARIO ================= -->
+
+<!-- ================= DEFINICIONES ================= -->
+
+<!-- ================= ACTIVIDADES VULNERABLES ================= -->
+<section class="on" id="av">
+<h2>Las 17 Actividades Vulnerables y sus umbrales</h2>
+<div class="note"><b>El padrón, en cuatro cifras.</b> Alrededor de <b>218 mil</b> personas físicas y morales están registradas por realizar alguna actividad vulnerable (webinar SAT–UIF, 20 de junio de 2026). Eran <b>107,642</b> al 30 de junio de 2022, según la Evaluación Nacional de Riesgos 2023: el padrón se duplicó en cuatro años. La fracción más numerosa es el <b>arrendamiento de inmuebles, con unos 36 mil registrados</b>: uno de cada seis. Y falta una cifra que no existe: <b>no hay estimación oficial del universo total que debería estar inscrito</b>, de modo que la brecha de no registro no está medida.</div>
+<p class="lead">Artículo 17 de la LFPIORPI, texto vigente con la reforma publicada el 16 de julio de 2025. El encabezado del artículo es expreso: todas las actividades listadas son <b>objeto de identificación</b>; el umbral es la excepción que cada fracción fija. Todos los montos se expresan en veces el valor diario de la UMA.</p>
+<div class="tools">
+<input id="q" placeholder="Busca tu actividad: notario, joyería, arrendamiento…" type="search"/>
+<span class="small" id="cnt"></span>
+</div>
+<table id="tav">
+<thead><tr><th style="width:78px">Fracción</th><th>Actividad</th><th style="width:210px">Umbral de identificación</th><th style="width:230px">Umbral de aviso</th></tr></thead>
+<tbody>
+<tr><td>I</td><td>Juegos con apuesta, concursos o sorteos</td><td>325 UMA</td><td>645 UMA</td></tr>
+<tr><td>II a)</td><td>Emisión o comercialización de tarjetas de servicios o de crédito, por sujetos distintos a Entidades Financieras</td><td>805 UMA de gasto mensual acumulado</td><td>1,285 UMA de gasto mensual acumulado</td></tr>
+<tr><td>II b)</td><td>Tarjetas prepagadas</td><td>645 UMA por operación</td><td>645 UMA</td></tr>
+<tr><td>II c)</td><td>Instrumentos de almacenamiento de valor monetario</td><td>645 UMA por operación</td><td>645 UMA</td></tr>
+<tr><td>III</td><td>Emisión y comercialización de cheques de viajero</td><td><b class="rojo">Siempre</b></td><td>645 UMA</td></tr>
+<tr><td>IV</td><td>Mutuo, garantía, préstamos o créditos con o sin garantía, por sujetos distintos a Entidades Financieras</td><td><b class="rojo">Siempre</b></td><td>1,605 UMA</td></tr>
+<tr><td>V</td><td>Construcción o desarrollo de bienes inmuebles e intermediación en la transmisión de propiedad</td><td><b class="rojo">Siempre</b></td><td>8,025 UMA</td></tr>
+<tr><td><b>V Bis</b></td><td><b>Recepción de recursos destinados a un Desarrollo Inmobiliario cuya finalidad sea su venta o renta</b> — nueva en la reforma de 2025</td><td><b class="rojo">Siempre</b></td><td>8,025 UMA</td></tr>
+<tr><td>VI</td><td>Metales preciosos, piedras preciosas, joyas o relojes</td><td>805 UMA</td><td>1,605 UMA</td></tr>
+<tr><td>VII</td><td>Subasta o comercialización de obras de arte</td><td>2,410 UMA</td><td>4,815 UMA</td></tr>
+<tr><td>VIII</td><td>Comercialización o distribución de vehículos nuevos o usados: aéreos, marítimos o terrestres</td><td>3,210 UMA</td><td>6,420 UMA</td></tr>
+<tr><td>IX</td><td>Servicios de blindaje de vehículos terrestres y de bienes inmuebles</td><td>2,410 UMA</td><td>4,815 UMA</td></tr>
+<tr><td>X</td><td>Traslado o custodia de dinero o valores</td><td><b class="rojo">Siempre</b></td><td>3,210 UMA · y <b class="rojo">siempre</b> cuando no sea posible determinar el monto trasladado o custodiado</td></tr>
+<tr><td>XI</td><td>Servicios profesionales independientes: compraventa de inmuebles, administración de recursos y activos, manejo de cuentas, organización de aportaciones de capital, constitución y operación de personas morales y vehículos corporativos incluido el fideicomiso</td><td><b class="rojo">Siempre</b></td><td>Sin umbral monetario: cuando se realice una operación financiera en nombre y representación del cliente, con respeto al secreto profesional y garantía de defensa</td></tr>
+<tr><td>XII A a)</td><td>Notarios: transmisión o constitución de derechos reales sobre inmuebles</td><td>—</td><td>8,000 UMA, tomando el más alto entre precio pactado, valor catastral, valor comercial o monto garantizado por suerte principal</td></tr>
+<tr><td>XII A b)</td><td>Notarios: otorgamiento de poderes irrevocables para actos de administración o dominio</td><td>—</td><td><b class="rojo">Siempre</b></td></tr>
+<tr><td>XII A c)</td><td>Notarios: constitución de personas morales, aumento o disminución de capital, fusión, escisión, compraventa de acciones y partes sociales</td><td>—</td><td><b class="rojo">Siempre</b></td></tr>
+<tr><td>XII A d)</td><td>Notarios: constitución o modificación de fideicomisos traslativos de dominio o de garantía</td><td>—</td><td>4,000 UMA</td></tr>
+<tr><td>XII A e)</td><td>Notarios: mutuo o crédito cuando el acreedor no forme parte del sistema financiero ni sea organismo público de vivienda</td><td>—</td><td><b class="rojo">Siempre</b></td></tr>
+<tr><td>XII B a)</td><td>Corredores públicos: avalúos sobre bienes</td><td>—</td><td>8,025 UMA</td></tr>
+<tr><td>XII B b–d)</td><td>Corredores públicos: constitución de morales mercantiles y movimientos de capital, fusión, escisión, acciones y partes sociales; fideicomisos en que puedan actuar; mutuo o crédito mercantil con acreedor fuera del sistema financiero</td><td>—</td><td>Sin umbral</td></tr>
+<tr><td>XII C</td><td>Servidores públicos a quienes las leyes confieren fe pública</td><td>—</td><td>Conforme al apartado aplicable</td></tr>
+<tr><td><b>XII D</b></td><td><b>Personas facilitadoras públicas y privadas de mecanismos alternativos de solución de controversias</b> — nuevo en la reforma de 2025; les aplican los supuestos del apartado A</td><td>—</td><td>Los del apartado A</td></tr>
+<tr><td>XIII</td><td>Recepción de donativos por asociaciones y sociedades sin fines de lucro</td><td>1,605 UMA</td><td>3,210 UMA</td></tr>
+<tr><td>XIV a–c, f)</td><td>Comercio exterior: vehículos terrestres, aéreos y marítimos; máquinas para juegos de apuesta y sorteos; equipos y materiales para elaborar tarjetas de pago; materiales de resistencia balística para blindaje</td><td>Cualquiera que sea el valor</td><td><b class="rojo">Siempre</b></td></tr>
+<tr><td>XIV d–e)</td><td>Comercio exterior: joyas, relojes, piedras y metales preciosos (485 UMA de valor individual); obras de arte (4,815 UMA de valor individual)</td><td>485 · 4,815 UMA</td><td><b class="rojo">Siempre</b></td></tr>
+<tr><td>XV</td><td>Constitución de derechos personales de uso o goce de bienes inmuebles (arrendamiento)</td><td>Valor mensual <b>superior</b> a 1,605 UMA</td><td>3,210 UMA mensuales</td></tr>
+<tr><td><b>XVI</b></td><td><b>Intercambio de activos virtuales</b>, incluidas las operaciones que se realicen con ciudadanos mexicanos desde otra jurisdicción</td><td><b class="rojo">Siempre</b></td><td>210 UMA por operación · 4 UMA cuando la operación dé lugar al cobro de una contraprestación</td></tr>
+</tbody>
+</table>
+<div class="note"><b>Tres precisiones que casi nadie distingue.</b> Primera: el notario del apartado A inciso a) usa <b>8,000</b> UMA, mientras que el corredor del apartado B inciso a) y las fracciones V y V Bis usan <b>8,025</b>. Son cifras distintas en el texto legal. Segunda: la fracción XV, de arrendamiento, dice «superior a» 1,605 y no «igual o superior», a diferencia de todas las demás. Tercera: el umbral de 4 UMA por contraprestación de la fracción XVI es el más bajo de toda la Ley.</div>
+<div class="note"><b>Y dos reglas que cambian todo el cálculo.</b> La acumulación: si una persona realiza actos u operaciones por una suma acumulada <b>en un periodo de seis meses</b> que supere el monto de aviso, puede ser considerada como operación sujeta a la obligación de presentarlo. Y la extensión a estructuras: «también se considerará que realizan las actividades vulnerables previstas en el presente artículo quienes actúan por medio de <b>fideicomisos o cualquier otra figura jurídica</b>».</div>
+</section>
+<!-- ================= ARTÍCULOS ================= -->
+
+<!-- ================= SISTEMA ================= -->
+
+<!-- ================= REPRESENTANTE ================= -->
+
+<!-- ================= ERRORES ================= -->
+
+<!-- ================= CALCULADORA ================= -->
+<section class="" id="calc">
+<h2>Calculadora de umbrales</h2>
+<p class="lead">Escribe el valor diario de la UMA y toda la tabla del artículo 17<span class="ref r-l">L</span> se convierte a pesos de una sola vez: los umbrales de identificación y los de aviso, para las diecisiete actividades. Abajo, un verificador de la regla de acumulación de seis meses, que es donde más se incumple sin darse cuenta.</p>
+<div class="uma">
+<div><label>Valor diario de la UMA, en pesos</label><input id="uma" min="0" step="0.01" type="number" value="117.31"/></div>
+<p class="hint">Edítalo con el valor vigente publicado por el INEGI. El precargado es el de <b>2026: $117.31 diarios, INEGI, vigente desde el 1 de febrero de 2026</b>. Los montos en pesos son referenciales: la obligación se calcula con la UMA vigente al momento del acto. Todos los importes de la tabla se recalculan solos.</p>
+</div>
+<table id="tcalc">
+<thead><tr><th style="width:74px">Fracción</th><th>Actividad</th><th style="width:190px">Identificación</th><th style="width:190px">Aviso</th></tr></thead>
+<tbody></tbody>
+</table>
+<p class="small">Los importes son el resultado de multiplicar el número de veces la UMA que fija cada fracción por el valor que capturaste. Redondeo a pesos. Donde la fracción no fija umbral, la obligación aplica siempre y no hay importe que calcular.</p>
+<div class="acum">
+<h3>Verificador de la regla de acumulación de seis meses</h3>
+<p class="small" style="margin:0">Último párrafo del artículo 17<span class="ref r-l">L</span>: si una persona realiza actos u operaciones por una suma acumulada en un periodo de seis meses que supere el monto de aviso, puede ser considerada como operación sujeta a la obligación de presentarlo. Es decir: el umbral no se mide operación por operación.</p>
+<div class="row">
+<div><label>Actividad</label><select id="acsel"></select></div>
+<div><label>Monto de cada operación ($)</label><input id="acmonto" min="0" step="1" type="number" value="0"/></div>
+<div><label>Operaciones en 6 meses</label><input id="acnum" min="1" step="1" type="number" value="1"/></div>
+</div>
+<div class="warn" id="acumres">Captura los datos para ver el resultado.</div>
+</div>
+<div class="note"><b>Lo que esta calculadora no hace, y conviene tener presente.</b> No decide si eres sujeto obligado: eso depende de que realices la actividad de manera habitual o profesional, no sólo de que rebases un monto. No sustituye la revisión de la fracción aplicable, porque varias tienen reglas propias —el traslado de valores obliga a avisar siempre que no pueda determinarse el monto; los servicios profesionales no tienen umbral monetario de aviso; el arrendamiento dice «superior a» y no «igual o superior»—. Y no incorpora las reglas de acumulación por cliente que tu propio manual establezca, que pueden ser más estrictas que la ley.</div>
+</section>
+<!-- ================= SANCIONES ================= -->
+
+<!-- ================= RUTA ================= -->
+
+</main>
+<footer><div class="wrap">
+<b>Fuentes.</b> LFPIORPI, reforma publicada en el Diario Oficial de la Federación el 16 de julio de 2025 · Reglamento de la Ley, reforma publicada el 27 de marzo de 2026, en vigor el 28 de marzo de 2026 · <b>ACUERDO 115/2026</b>, por el que se modifican las Reglas de Carácter General a que se refiere la LFPIORPI, publicado en el Diario Oficial de la Federación el viernes 7 de agosto de 2026, suscrito por Édgar Abraham Amador Zamora, Secretario de Hacienda y Crédito Público.<br/><br/>
+<b>Nota.</b> Este sitio es material de apoyo académico. Los montos en pesos son referenciales y deben calcularse con la UMA vigente al momento del acto. No constituye asesoría legal ni dictamen para un caso concreto. Este material se mantiene vivo: si en el camino detectamos cualquier error o algo que convenga precisar, se actualiza a su versión más reciente en esta misma liga.<br/><br/>
+GMC360 · 360Educa · versión 1.1 · 12 de agosto de 2026. Material abierto: puedes compartirlo con tu equipo.
+</div></footer>
+<script>
+// tabs
+document.querySelectorAll('nav button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('section').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    document.getElementById(b.dataset.t).classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});
+  };
+});
+// countdown
+function days(to){const t=new Date(to+'T00:00:00');const n=new Date();n.setHours(0,0,0,0);return Math.max(0,Math.round((t-n)/86400000));}
+document.getElementById('c1').textContent=days('2026-11-30');
+document.getElementById('c2').textContent=days('2027-03-01');
+// search AV
+const q=document.getElementById('q'), rows=[...document.querySelectorAll('#tav tbody tr')], cnt=document.getElementById('cnt');
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function filt(){
+  const v=norm(q.value.trim()); let n=0;
+  rows.forEach(r=>{const m=!v||norm(r.textContent).includes(v);r.style.display=m?'':'none';if(m)n++;});
+  cnt.textContent=v?n+' de '+rows.length+' supuestos':rows.length+' supuestos';
+}
+q.oninput=filt; filt();
+
+// ---------- calculadora de umbrales ----------
+const AV=[
+ ["I","Juegos con apuesta, concursos o sorteos",325,645],
+ ["II a)","Tarjetas de servicios o de crédito, no financieras",805,1285],
+ ["II b)","Tarjetas prepagadas",645,645],
+ ["II c)","Instrumentos de almacenamiento de valor monetario",645,645],
+ ["III","Cheques de viajero",null,645],
+ ["IV","Mutuo, garantía, préstamos o créditos, no financieros",null,1605],
+ ["V","Construcción o desarrollo de inmuebles e intermediación",null,8025],
+ ["V Bis","Recepción de recursos para un Desarrollo Inmobiliario",null,8025],
+ ["VI","Metales y piedras preciosas, joyas y relojes",805,1605],
+ ["VII","Obras de arte",2410,4815],
+ ["VIII","Vehículos nuevos o usados: aéreos, marítimos, terrestres",3210,6420],
+ ["IX","Blindaje de vehículos y de inmuebles",2410,4815],
+ ["X","Traslado o custodia de dinero o valores",null,3210],
+ ["XI","Servicios profesionales independientes",null,null],
+ ["XII A a)","Notarios · derechos reales sobre inmuebles",null,8000],
+ ["XII A b)","Notarios · poderes irrevocables",null,null],
+ ["XII A c)","Notarios · constitución de morales, capital, fusión, escisión, acciones",null,null],
+ ["XII A d)","Notarios · fideicomisos traslativos o de garantía",null,4000],
+ ["XII A e)","Notarios · mutuo o crédito con acreedor fuera del sistema financiero",null,null],
+ ["XII B a)","Corredores · avalúos",null,8025],
+ ["XIII","Recepción de donativos por asociaciones sin fines de lucro",1605,3210],
+ ["XIV d)","Comercio exterior · joyas, relojes, piedras y metales preciosos",485,null],
+ ["XIV e)","Comercio exterior · obras de arte",4815,null],
+ ["XV","Arrendamiento de inmuebles · valor mensual SUPERIOR a",1605,3210],
+ ["XVI","Activos virtuales · por operación",null,210],
+ ["XVI","Activos virtuales · por contraprestación",null,4]
+];
+const fmt=n=>"$"+Math.round(n).toLocaleString("es-MX");
+function celda(v,uma){
+  if(v===null) return '<span class="rojo" style="font-weight:bold">Siempre / sin umbral</span>';
+  return '<span class="money">'+fmt(v*uma)+'</span><br><span class="uma-n">'+v.toLocaleString("es-MX")+' UMA</span>';
+}
+function pintaCalc(){
+  const uma=parseFloat(document.getElementById("uma").value)||0;
+  document.querySelector("#tcalc tbody").innerHTML=AV.map(r=>
+    "<tr><td><b>"+r[0]+"</b></td><td>"+r[1]+"</td><td>"+celda(r[2],uma)+"</td><td>"+celda(r[3],uma)+"</td></tr>").join("");
+  acum();
+}
+document.getElementById("uma").addEventListener("input",pintaCalc);
+
+const sel=document.getElementById("acsel");
+AV.forEach((r,i)=>{ if(r[3]!==null){ const o=document.createElement("option"); o.value=i; o.textContent=r[0]+" · "+r[1]; sel.appendChild(o);} });
+function acum(){
+  const uma=parseFloat(document.getElementById("uma").value)||0;
+  const r=AV[parseInt(sel.value)];
+  const m=parseFloat(document.getElementById("acmonto").value)||0;
+  const n=parseInt(document.getElementById("acnum").value)||0;
+  const box=document.getElementById("acumres");
+  if(!r||!uma||!m||!n){ box.className="warn"; box.textContent="Captura los datos para ver el resultado."; return; }
+  const umbral=r[3]*uma, total=m*n;
+  const pasaSuelta=m>=umbral, pasaAcum=total>=umbral;
+  if(pasaSuelta){
+    box.className="bad";
+    box.innerHTML="<b>Cada operación, por sí sola, ya rebasa el umbral de aviso.</b><br>"+fmt(m)+" contra un umbral de "+fmt(umbral)+" ("+r[3].toLocaleString("es-MX")+" UMA). Hay obligación de aviso por cada una, sin necesidad de acumular.";
+  } else if(pasaAcum){
+    box.className="bad";
+    box.innerHTML="<b>Ninguna operación rebasa el umbral por separado, pero la suma de seis meses sí.</b><br>"+n+" × "+fmt(m)+" = <b>"+fmt(total)+"</b>, contra un umbral de "+fmt(umbral)+" ("+r[3].toLocaleString("es-MX")+" UMA).<br>Éste es exactamente el supuesto del último párrafo del artículo 17 L, y es donde más se incumple sin darse cuenta: si tu control es revisar operación por operación, no lo vas a detectar.";
+  } else {
+    const faltan=umbral-total;
+    box.className="ok";
+    box.innerHTML="<b>Por debajo del umbral de aviso.</b><br>"+n+" × "+fmt(m)+" = "+fmt(total)+", contra "+fmt(umbral)+" ("+r[3].toLocaleString("es-MX")+" UMA). Faltan "+fmt(faltan)+" para cruzarlo dentro de la misma ventana de seis meses.<br><span style='font-size:12.5px'>Ojo: esto no te exime de identificar, que es obligación aparte y en varias fracciones no tiene umbral.</span>";
+  }
+}
+["acsel","acmonto","acnum"].forEach(id=>document.getElementById(id).addEventListener("input",acum));
+pintaCalc();
+
+// checklist
+const boxes=[...document.querySelectorAll('#lista input')];
+function upd(){
+  const d=boxes.filter(b=>b.checked).length;
+  document.getElementById('prog').style.width=(d/boxes.length*100)+'%';
+  document.getElementById('progtxt').textContent=d+' de '+boxes.length+' completados';
+  boxes.forEach(b=>b.closest('.chk').classList.toggle('done',b.checked));
+}
+boxes.forEach(b=>b.onchange=upd); upd();
+</script>
+</body>
+</html>

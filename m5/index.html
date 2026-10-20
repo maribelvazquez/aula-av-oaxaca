@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 5 · Estructuras internas de cumplimiento · Curso PLD/FT Actividades Vulnerables</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#12224A">
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="../index.html"><span style="font-size:15px;line-height:1">&#8592;</span> Todos los módulos</a><span>Día 2 · Módulo 5 de 9</span></div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Curso–taller PLD/FT · Actividades Vulnerables · Día 2 · Módulo 5</p>
+    <h1>Estructuras internas de cumplimiento y sus funciones</h1>
+    <p class="meta">Jueves 22 de octubre de 2026 · 11:00 a 12:00 (repaso relámpago del Día 1 de 11:00 a 11:10)</p>
+    <p class="meta">Imparte: Maribel Vázquez Menchaca</p>
+    <div class="citas" style="margin-top:18px">
+      <span class="cita L"><i>L</i><span>18 fr. VIII, IX y XI · 20 · 38 · 41 Bis</span></span>
+      <span class="cita RCG"><i>RCG</i><span>7 · 10 · 34 Bis · 37 a 37 Bis 3</span></span>
+      <span class="cita RCG"><i>RCG</i><span>39 Bis a 39 Bis 2 · 42 a 51</span></span>
+    </div>
+    <p class="sede">GMC360 · 360Educa · Oaxaca, octubre de 2026</p>
+  </div>
+</header>
+
+<nav class="blocks"><div class="wrap"><ol>
+  <li><a href="#repaso-dia1"><b>11:00</b>Repaso Día 1</a></li>
+  <li><a href="#esencial"><b>Explicación</b>Lo esencial</a></li>
+  <li><a href="#ejemplos"><b>Ejemplos</b>Casos resueltos</a></li>
+  <li><a href="#trampas"><b>Cuidado</b>Trampas</a></li>
+  <li><a href="#dinamica"><b>En mesas</b>Dinámica</a></li>
+  <li><a href="#repaso"><b>Para volver</b>Repaso</a></li>
+  <li><a href="#descargas"><b>&nbsp;</b>Descargas</a></li>
+</ol></div></nav>
+
+<div class="wrap">
+
+<!-- ===================== REPASO RELÁMPAGO DEL DÍA 1 ===================== -->
+<section class="bloque" id="repaso-dia1">
+  <span class="reloj">11:00 – 11:10 · 10 minutos</span>
+  <h2>Repaso relámpago del Día 1 · «Quiz de competencia entre equipos»</h2>
+  <p class="dosr">Doce preguntas rápidas sobre los Módulos 1 a 4: conceptos, umbrales, Avisos, calendario y sanciones. Sirven para arrancar el Día 2 con el mismo vocabulario.</p>
+  <div class="dinamica">
+    <div class="ficha"><div><b>Tiempo</b>10 min</div><div><b>Formación</b>Mesas de 5 a 6 como equipos</div><div><b>Material</b>Una hoja por mesa con renglones del 1 al 12</div><div><b>Objetivo</b>Recuperar los datos del Día 1 que se usan hoy</div></div>
+    <ol class="pasos">
+      <li><b>Se lee la pregunta y sus cuatro opciones.</b> Cada mesa tiene 30 segundos para escribir la letra en su hoja.</li>
+      <li><b>Se revela la respuesta</b> con su fundamento. Un punto por acierto.</li>
+      <li><b>Pregunta de desempate:</b> la 12, con el monto exacto en pesos.</li>
+    </ol>
+  </div>
+
+  <div class="grid g2">
+    <div class="caso"><p class="ch">Pregunta 1 · Conceptos</p>
+      <p>Un comerciante deposita en varias cuentas, en montos pequeños, el efectivo que obtuvo de un delito. ¿En qué etapa del lavado de dinero está?</p>
+      <p>A) Integración · B) Colocación · C) Estratificación · D) Financiamiento</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B) Colocación.</b> Es el primer contacto del dinero ilícito con el sistema. La estratificación viene después (mover y mezclar para borrar el rastro) y la integración al final (el dinero regresa con apariencia lícita). Concepto general del Módulo 1: las etapas no están definidas en la Ley.</div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 2 · Conceptos</p>
+      <p>¿Por qué un sistema de alertas que sólo vigila montos altos se queda corto frente al financiamiento al terrorismo?</p>
+      <p>A) Porque el terrorismo sólo usa efectivo · B) Porque puede moverse en importes pequeños y sin anomalía de monto · C) Porque no es delito en México · D) Porque lo vigila otra ley</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> Las Reglas piden que el sistema de alertas sirva para prevenir conductas de los dos delitos: el lavado (400 Bis) y el financiamiento al terrorismo (139 Quáter). El segundo suele verse por contraparte, destino y listas, no por monto. <span class="cita RCG"><i>RCG</i><span>23 Ter 2</span></span> <span class="cita CPF"><i>CPF</i><span>139 Quáter · 400 Bis</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 3 · Umbrales</p>
+      <p>Una agencia vende una camioneta por 4,000 UMA, sin otras operaciones con ese cliente. ¿Qué le toca?</p>
+      <p>A) Identificar y dar Aviso · B) Identificar e integrar expediente, sin Aviso por ese acto · C) Nada · D) Sólo dar Aviso</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> En vehículos se identifica desde 3,210 UMA y se avisa desde 6,420 UMA. Se puede identificar sin avisar. Avisar sin expediente completo sólo ocurre en el Aviso de 24 horas de una operación intentada (R 7 Bis). Si con operaciones posteriores la suma de seis meses llega al umbral de Aviso, la respuesta cambia. <span class="cita L"><i>L</i><span>17 fr. VIII</span></span> <span class="cita R"><i>R</i><span>7</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 4 · Umbrales</p>
+      <p>Una inmobiliaria que intermedia habitualmente en compraventas, ¿desde qué monto identifica a su cliente?</p>
+      <p>A) Desde 8,025 UMA · B) Desde 3,210 UMA · C) Desde el primer acto, sin monto mínimo · D) Sólo si paga en efectivo</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>C).</b> La fracción V no fija umbral de identificación: identifica en todos los casos. Su umbral de Aviso es 8,025 UMA. La forma de pago no cambia la obligación de identificar. <span class="cita L"><i>L</i><span>17 fr. V</span></span> <span class="cita R"><i>R</i><span>7, 3er párr.</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 5 · Avisos</p>
+      <p>Una operación avisable se realizó el 9 de marzo. ¿Cuál es la fecha límite del Aviso?</p>
+      <p>A) 9 de abril · B) 31 de marzo · C) 17 de marzo · D) 17 de abril</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>D) 17 de abril.</b> Los Avisos se presentan a más tardar el día 17 del mes inmediato siguiente al de la operación. <span class="cita L"><i>L</i><span>23</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 6 · Avisos</p>
+      <p>En junio no hubo ninguna operación objeto de Aviso. ¿Qué se presenta?</p>
+      <p>A) Nada · B) Un informe de que no hubo operaciones objeto de Aviso · C) Un Aviso en ceros por cada cliente · D) Un escrito libre al SAT</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> El mes sin operaciones avisables también se reporta, con un informe en el formato oficial. <span class="cita RCG"><i>RCG</i><span>25</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 7 · Avisos</p>
+      <p>Con la tercera compra de un mismo cliente, a los 50 días, la suma alcanza el umbral de Aviso. ¿Cuándo nace el Aviso?</p>
+      <p>A) Al terminar los seis meses · B) Al cierre del ejercicio · C) Al realizarse esa tercera operación · D) Nunca, porque ninguna llegó sola</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>C).</b> La acumulación considera un periodo de hasta seis meses, y el Aviso procede al realizarse la última operación con la que se alcanza o supera el umbral, aunque no se haya agotado el periodo. Sólo suman las operaciones que en lo individual caen en supuesto de identificación. <span class="cita R"><i>R</i><span>7</span></span> <span class="cita L"><i>L</i><span>17, penúltimo párr.</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 8 · Calendario</p>
+      <p>¿Cuándo entra en vigor el ACUERDO 115/2026 que reformó las Reglas?</p>
+      <p>A) 7 de agosto de 2026 · B) 30 de noviembre de 2026 · C) 1 de marzo de 2027 · D) 1 de enero de 2028</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> Se publicó el 7 de agosto de 2026 y entra en vigor el 30 de noviembre de 2026, salvo lo que sus transitorios difieren. <span class="cita RCG"><i>RCG</i><span>Trans. Primero</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 9 · Calendario</p>
+      <p>Para quien ya está dado de alta, ¿desde cuándo debe tener su Manual con la metodología de riesgos incluida?</p>
+      <p>A) 1 de marzo de 2027 · B) 30 de noviembre de 2026 · C) 1 de junio de 2027 · D) 31 de diciembre de 2027</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>A).</b> El Manual con la metodología y la evaluación con enfoque basado en riesgos deben estar a disposición de la autoridad, previo requerimiento, a partir del 1 de marzo de 2027. <span class="cita RCG"><i>RCG</i><span>Trans. Segundo y Tercero</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 10 · Calendario</p>
+      <p>¿Qué vence el 1 de junio de 2027?</p>
+      <p>A) El primer dictamen de auditoría · B) Los mecanismos automatizados y el uso de los formatos nuevos de Avisos · C) El primer periodo de capacitación · D) La consulta PEP 2.0</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> Los mecanismos automatizados deben existir a más tardar el 1 de junio de 2027, con la información de las operaciones desde esa fecha; y desde ese día los Avisos e Informes se envían con los formatos publicados en el DOF el 24 de septiembre de 2026. <span class="cita RCG"><i>RCG</i><span>Trans. Noveno</span></span> <span class="cita RES"><i>RES</i><span>Formatos de Avisos, Trans. Primero y Segundo</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 11 · Sanciones</p>
+      <p>No tener Manual de Políticas Internas es incumplir una obligación del artículo 18. ¿Qué rango de multa corresponde?</p>
+      <p>A) 10,000 a 65,000 UMA · B) 2,000 a 10,000 UMA · C) 200 a 2,000 UMA · D) Sólo amonestación</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>C) 200 a 2,000 UMA</b>, es decir de $23,462 a $234,620 con la UMA de 2026 ($117.31 diarios), por obligación incumplida. <span class="cita L"><i>L</i><span>53 fr. II · 54 fr. I</span></span></div></details></div>
+
+    <div class="caso"><p class="ch">Pregunta 12 · Sanciones · desempate</p>
+      <p>Una casa se paga en efectivo por un monto superior al tope legal. ¿Cuál es el tope y qué multa arriesga quien participa?</p>
+      <p>A) 3,210 UMA; 200 a 2,000 UMA · B) 8,025 UMA; 10,000 a 65,000 UMA o del 10 al 100 % del valor, la que resulte mayor · C) 6,420 UMA; 2,000 a 10,000 UMA · D) No hay tope para inmuebles</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>B).</b> El tope para inmuebles es de 8,025 UMA ($941,412.75 con la UMA de 2026). La prohibición alcanza a quien paga y a quien acepta el pago. <span class="cita L"><i>L</i><span>32 fr. I · 53 fr. VII · 54 fr. III</span></span></div></details></div>
+  </div>
+</section>
+
+<!-- ===================== ESENCIAL ===================== -->
+<section class="bloque" id="esencial">
+  <span class="reloj">11:10 – 11:35 · exposición</span><br>
+  <span class="gancho">Si mañana renuncia su Representante, ¿quién responde por el cumplimiento?</span>
+  <h2>Cumplir es trabajo de varias manos</h2>
+  <p class="dosr">La Ley pone a una persona al frente, pero reparte tareas entre consejo, directivos, personal y auditor. Aquí se ve quién hace qué y dónde se escribe.</p>
+
+  <h3>El módulo en cuatro preguntas</h3>
+  <div class="grid g4">
+    <div class="card"><p class="et">1 · Personas</p><h4>¿Quién responde?</h4><p>La persona Representante, y detrás de ella el órgano de administración.</p></div>
+    <div class="card"><p class="et">2 · Documento</p><h4>¿Dónde está escrito?</h4><p>En el Manual de Políticas Internas: catorce apartados mínimos.</p></div>
+    <div class="card"><p class="et">3 · Gente</p><h4>¿Quién sabe hacerlo?</h4><p>Capacitación anual con evaluación, y selección de personal.</p></div>
+    <div class="card"><p class="et">4 · Revisión</p><h4>¿Quién lo comprueba?</h4><p>Una auditoría anual que califica la efectividad, no el papel.</p></div>
+  </div>
+  <div class="banda ambar">Para memorizar, cuatro números: <strong>10 · 6 · 90 · 5</strong>. Diez días hábiles para que el SAT notifique si la designación se aceptó; seis días hábiles para reportar un cambio de Representante; noventa días naturales desde el alta para tener Manual; cinco años de experiencia de quien imparte la capacitación.</div>
+  <div class="citas"><span class="cita RCG"><i>RCG</i><span>10, 3er párr.</span></span><span class="cita RCG"><i>RCG</i><span>7</span></span><span class="cita RCG"><i>RCG</i><span>37</span></span><span class="cita RCG"><i>RCG</i><span>39 Bis fr. III</span></span></div>
+
+  <!-- Subtema 1 -->
+  <h3>1 · Por qué el cumplimiento no es tarea de una sola persona</h3>
+  <p class="dosr">La norma reparte el trabajo: unos deciden, otros identifican, otros revisan. Si todo recae en una sola persona, la auditoría lo nota y el consejo sigue respondiendo.</p>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Quién</th><th>Qué le toca, según la norma</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Órgano de administración o administrador único</td><td>Responde de todas las obligaciones mientras no haya Representante o su designación no sea aceptada. Recibe el dictamen anual de auditoría. Debe capacitarse.</td><td>L 20, 2º párr. · RCG 42, 2º párr. · RCG 39 Bis</td></tr>
+      <tr><td class="k">Directivo o su equivalente</td><td>Aprueba los actos u operaciones con una Persona Políticamente Expuesta que además tenga Grado de Riesgo alto.</td><td>RCG 23 Ter 5</td></tr>
+      <tr><td class="k">Persona Representante Encargada de Cumplimiento</td><td>Encargada del cumplimiento de las obligaciones de la Ley. Sus funciones y responsabilidades deben constar en el Manual. Se capacita cada año.</td><td>L 20 · RCG 37 Bis fr. X</td></tr>
+      <tr><td class="k">Personal que atiende público, identifica clientes o envía Avisos</td><td>Recibe capacitación; quien atiende público o administra recursos, antes de empezar o al mismo tiempo.</td><td>RCG 39 Bis · 39 Bis 1</td></tr>
+      <tr><td class="k">Auditoría interna o auditor externo</td><td>Dictamina cada año la efectividad del cumplimiento. El área interna debe ser independiente de la Representante.</td><td>L 18 fr. XI · RCG 44 y 45</td></tr>
+      <tr><td class="k">Todos, sin distinción de contrato</td><td>Absoluta confidencialidad sobre las operaciones, los Avisos y la estructura de control del Beneficiario Controlador.</td><td>RCG 31</td></tr>
+    </tbody>
+  </table></div>
+  <p>Hay además una responsabilidad de origen societario: la Ley General de Sociedades Mercantiles (art. 158, fr. III) hace a los administradores responsables de que existan y se mantengan los sistemas de control, registro y archivo que prevé la ley. Sirve para ordenar el reparto: <b>el órgano de administración responde de que el sistema exista y tenga recursos; la Representante, de operarlo y de pedir y documentar lo que le falte.</b> Esa frontera es criterio de interpretación, no texto de la LFPIORPI.</p>
+  <p>Una aclaración que evita trabajo inútil: este régimen <b>no exige un Comité de Comunicación y Control</b>. Esa figura pertenece a otro régimen; aquí no se prevé ni se prohíbe. Un órgano colegiado que delibere y levante acta puede ser buena práctica en estructuras grandes, pero no es obligación.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>20</span></span><span class="cita RCG"><i>RCG</i><span>31 · 39 Bis · 42 · 44</span></span></div>
+
+  <!-- Subtema 2 -->
+  <h3>2 · La persona Representante Encargada de Cumplimiento</h3>
+  <p class="dosr">Las personas morales y los fideicomisos designan a una persona física. Sin aceptación en el Portal no hay Representante, y responde el órgano de administración.</p>
+  <div class="cifras">
+    <div class="cifra on"><div class="et">Mientras no se acepte</div><div class="n">0</div><div class="lv">Representantes vigentes</div><div class="nota">Responde el órgano de administración o el administrador único (L 20, 2º párr.)</div></div>
+    <div class="cifra"><div class="et">Plazo del SAT</div><div class="n">10</div><div class="lv">días hábiles</div><div class="nota">para notificar a quien designó si la designación se aceptó o rechazó (RCG 10)</div></div>
+  </div>
+  <p><b>Quién designa.</b> Las personas morales y quienes actúan a través de fideicomisos u otra figura jurídica. La persona física que realiza la Actividad Vulnerable no designa: cumple personal y directamente, salvo que presente sus Avisos por conducto de una Entidad Colegiada.</p>
+  <h3>Los cinco pasos del artículo 10</h3>
+  <ol class="pasos">
+    <li><b>La persona designada entra al Portal</b> con su propio RFC y su propia e.firma, y acepta o rechaza. La designación no está completa hasta ese acto.</li>
+    <li><b>Si no está inscrita en el RFC</b>, puede inscribirse sin obligaciones fiscales sólo para tramitar su e.firma.</li>
+    <li><b>El SAT notifica</b> a quien designó, dentro de los diez días hábiles siguientes, si la designación fue aceptada o rechazada.</li>
+    <li><b>El rechazo no libera de nada.</b> Quien designó sigue obligado, y sigue respondiendo el órgano de administración hasta que alguien acepte.</li>
+    <li><b>Sólo puede ser persona física.</b> No se designa a un despacho, a una firma ni a un área.</li>
+  </ol>
+  <div class="citas"><span class="cita L"><i>L</i><span>20</span></span><span class="cita RCG"><i>RCG</i><span>10</span></span></div>
+
+  <p><b>Sus funciones.</b> La Ley la define como la persona designada en términos del artículo 20 y la hace encargada del cumplimiento, pero <b>no enumera sus funciones</b>: manda que el Manual las contenga. Es el Manual el que tiene que decir qué decide, qué firma y a quién reporta. El Manual modelo del curso propone, por ejemplo, vigilar la aplicación del Manual, resolver las alertas escaladas, decidir los Avisos por sospecha, atender requerimientos, proponer actualizaciones, verificar los expedientes una vez al año y coordinar la capacitación. Eso es una propuesta de redacción, no una lista legal.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>3 fr. XII Bis · 20</span></span><span class="cita RCG"><i>RCG</i><span>37 Bis fr. X</span></span></div>
+
+  <h3>Las dos protecciones de quien acepta</h3>
+  <div class="grid g2">
+    <div class="card"><p class="et">Identidad</p><h4>No tiene que comparecer en persona</h4><p>Su identidad es confidencial y reservada. Si una autoridad judicial o administrativa requiere su comparecencia por sus funciones, la diligencia puede desahogarla la persona representante legal o apoderada. <b>L 38 · L 41 Bis</b></p></div>
+    <div class="card"><p class="et">Certificación</p><h4>Es voluntaria, no requisito</h4><p>La UIF «podrá» certificar a personas físicas que realizan la actividad y a Representantes que ya aceptaron, conforme a convocatoria en el DOF, con vigencia de cinco años. No condiciona el cargo. <b>RCG 34 Bis</b></p></div>
+  </div>
+
+  <h3>Tres obligaciones que se olvidan</h3>
+  <ul class="marca">
+    <li><b>Capacitación anual de la propia Representante.</b> Está en el artículo 20 de la Ley, no sólo en el capítulo de capacitación. <span class="cita L"><i>L</i><span>20, 3er párr.</span></span></li>
+    <li><b>Cambiar de Representante es actualizar el registro</b>, dentro de los seis días hábiles siguientes al hecho que lo motiva. <span class="cita RCG"><i>RCG</i><span>7</span></span></li>
+    <li><b>Sus funciones van en el Manual</b>, como apartado con procedimiento, no como organigrama. <span class="cita RCG"><i>RCG</i><span>37 Bis fr. X</span></span></li>
+  </ul>
+
+  <h3>Cuatro cosas que revisar antes de aceptar el cargo</h3>
+  <div class="grid g4">
+    <div class="card"><h4>Pida el Manual</h4><p>Va a responder por lo que ahí esté escrito. Léalo antes de firmar.</p></div>
+    <div class="card"><h4>Verifique su autoridad real</h4><p>¿Puede detener una operación? ¿A quién reporta? Sin autoridad no hay efectividad que dictaminar.</p></div>
+    <div class="card"><h4>Confirme recursos</h4><p>Capacitación, datos, sistema y tiempo. Un cargo sin presupuesto es una firma sin respaldo.</p></div>
+    <div class="card"><h4>Conozca sus protecciones</h4><p>Identidad reservada y comparecencia por apoderado (L 38 y 41 Bis).</p></div>
+  </div>
+  <p>Un dato para la conversación con el órgano de administración: el catálogo de multas del artículo 53 no incluye el artículo 20. No designar no tiene multa propia, pero mientras no haya designación aceptada, cada incumplimiento del artículo 18 corresponde a quienes integran el órgano de administración.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>20, 2º párr. · 53</span></span></div>
+
+  <!-- Subtema 3 -->
+  <h3>3 · Contenido mínimo del Manual de Políticas Internas</h3>
+  <p class="dosr">El Manual dice cómo cumple la empresa cada obligación: quién, cuándo, con qué y qué rastro deja. La Ley pide elaborarlo y, además, aplicarlo de verdad.</p>
+  <p><b>Dos verbos.</b> «Elaborar» se acredita con el documento; «observar», con la evidencia de que se aplica. Un Manual impecable que nadie sigue incumple la mitad de la fracción. <b>Plazo:</b> noventa días naturales desde el alta y registro; para quien ya está de alta, el Manual con la metodología de riesgos incluida es exigible a partir del 1 de marzo de 2027.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>18 fr. VIII</span></span><span class="cita RCG"><i>RCG</i><span>37</span></span><span class="cita RCG"><i>RCG</i><span>Trans. Tercero</span></span></div>
+
+  <h3>Las catorce fracciones</h3>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Fracción del artículo 37 Bis</th><th>Fracción del artículo 37 Bis</th></tr></thead>
+    <tbody>
+      <tr><td>I · Criterios de identificación y conocimiento del cliente</td><td>VIII · Seguimiento y acumulación frente a umbrales de Aviso</td></tr>
+      <tr><td>II · Mecanismos de clasificación de Riesgo</td><td>IX · Listas de autoridades nacionales u organismos internacionales</td></tr>
+      <tr><td>III · Debida diligencia según el Grado de Riesgo</td><td>X · Funciones y responsabilidades de la Representante</td></tr>
+      <tr><td>IV · Identificación y seguimiento reforzado de PEP</td><td>XI · Programas de capacitación</td></tr>
+      <tr><td>V · Detección de operaciones fuera del Perfil transaccional</td><td>XII · Control interno, supervisión y auditoría</td></tr>
+      <tr><td>VI · Presentación de Avisos e Informes</td><td>XIII · Confidencialidad de la información</td></tr>
+      <tr><td>VII · Conservación de la información</td><td>XIV · Actualización del propio Manual</td></tr>
+    </tbody>
+  </table></div>
+  <p>Fuera del 37 Bis, el Manual o el documento al que remita debe traer además: el diseño de la metodología de riesgos y los criterios de apertura, limitación o terminación de relaciones, congruentes con ella; los criterios para identificar al Beneficiario Controlador; los procedimientos de selección de personal; y, en grupo empresarial, las políticas centralizadas para sucursales y filiales de propiedad mayoritaria.</p>
+  <div class="citas"><span class="cita RCG"><i>RCG</i><span>37 Bis</span></span><span class="cita RCG"><i>RCG</i><span>37, últ. párr.</span></span><span class="cita RCG"><i>RCG</i><span>23 Quinquies · 39 Bis 2 · 37 Bis 1</span></span></div>
+
+  <h3>Por qué el Manual viene después</h3>
+  <blockquote>Deberán desarrollar […] la gestión de Riesgos de acuerdo con los resultados obtenidos de la metodología a que se refiere el Capítulo II Quáter de las presentes Reglas.<cite>Reglas de Carácter General, artículo 37</cite></blockquote>
+  <p>Un Manual escrito antes de la evaluación de riesgos describe controles que nadie calibró contra nada. Por eso, en la práctica, el Manual se termina con los resultados de la metodología en la mano, y los dos vencen el mismo día: 1 de marzo de 2027. <b>Ojo con el orden de este curso:</b> el Manual se ve en el Módulo 5 y la metodología en el Módulo 8. Es un orden didáctico, no el orden de la norma.</p>
+
+  <h3>Cuatro cosas más que conviene saber del Manual</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Lo que usted no hace, se declara</h4><p>Quien determine no realizar ciertos supuestos (por ejemplo, no recibir efectivo) queda exento de escribir políticas sobre ellos, siempre que lo haga constar en el Manual. Si después decide hacerlo, la política tiene que estar escrita antes. <b>RCG 37 Bis 2</b></p></div>
+    <div class="card"><h4>Puede vivir en varios documentos</h4><p>Siempre que el Manual traiga las referencias a ellos. Sin la referencia, para quien revisa ese documento no existe. <b>RCG 37</b></p></div>
+    <div class="card"><h4>No se registra ante el SAT</h4><p>Se pone a disposición cuando la autoridad lo requiera. El SAT puede ordenar modificarlo: es revisión posterior, no autorización previa. <b>RCG 37 · 37 Bis 3</b></p></div>
+    <div class="card"><h4>El acta de aprobación no es obligación</h4><p>Ninguna disposición exige que el consejo apruebe el Manual. Es buena práctica y conviene documentarla, pero no se cita con artículo. Lo que sí va al órgano de gobierno es el dictamen de auditoría. <b>RCG 37 a 37 Bis 3 · 42</b></p></div>
+  </div>
+
+  <h3>Cómo se escribe un apartado que aguanta una revisión</h3>
+  <p>Cada obligación se desarrolla completa, en cuatro planos, catorce veces:</p>
+  <div class="grid g4">
+    <div class="card dark"><p class="et">Plano 1</p><h4>La regla</h4><p>¿Qué me piden? Se localiza y se cita.</p></div>
+    <div class="card dark"><p class="et">Plano 2</p><h4>El criterio</h4><p>¿Qué cuenta como qué, aquí? Umbrales y supuestos propios.</p></div>
+    <div class="card dark"><p class="et">Plano 3</p><h4>El procedimiento</h4><p>¿Quién, en qué orden, en qué plazo, con qué herramienta?</p></div>
+    <div class="card dark"><p class="et">Plano 4</p><h4>La evidencia</h4><p>¿Qué rastro deja y dónde se guarda?</p></div>
+  </div>
+  <p>Dos pruebas rápidas: si alguien que entró ayer puede ejecutar el apartado sin preguntar, está bien escrito; si al ejecutarlo queda rastro (acuse, bitácora, registro con fecha y usuario), se puede demostrar. Un apartado sin responsable, sin plazo y sin evidencia no es un procedimiento: es una transcripción de la ley. Los cuatro planos son método de trabajo, no texto legal; la norma sí pide «criterios, medidas y procedimientos» para cada obligación.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>18 fr. VIII</span></span><span class="cita RCG"><i>RCG</i><span>11 · 23 Ter fr. I · 23 Quinquies</span></span></div>
+
+  <!-- Subtema 4 -->
+  <h3>4 · Programa anual de capacitación</h3>
+  <p class="dosr">Cada año se capacita a quien decide, atiende clientes, envía Avisos o audita. Sin evaluación no hay constancia, y la evidencia se guarda diez años.</p>
+  <div class="cifras">
+    <div class="cifra on"><div class="et">Primer periodo anual</div><div class="n">2027</div><div class="lv">del 1 de enero al 31 de diciembre</div><div class="nota">Transitorio Séptimo del ACUERDO 115/2026</div></div>
+    <div class="cifra"><div class="et">Quien imparte</div><div class="n">5</div><div class="lv">años de experiencia acreditable</div><div class="nota">en prevención de lavado de dinero y delitos relacionados (RCG 39 Bis fr. III)</div></div>
+  </div>
+  <h3>A quién</h3>
+  <div class="grid g3">
+    <div class="card"><p class="et">Gobierno</p><h4>Arriba</h4><p>Consejo de administración, administrador único o equivalente, directivos y funcionarios.</p></div>
+    <div class="card"><p class="et">Cumplimiento</p><h4>La Representante</h4><p>Nombrada dos veces: aquí y en el artículo 20 de la Ley.</p></div>
+    <div class="card"><p class="et">Operación</p><h4>Cuatro perfiles</h4><p>Quien atiende público, quien identifica o conoce al cliente, quien envía Avisos y quien hace auditoría.</p></div>
+  </div>
+  <h3>Qué debe contener</h3>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Fracción</th><th>Contenido mínimo</th></tr></thead>
+    <tbody>
+      <tr><td class="k">I · a)</td><td>Ley, Reglamento, Reglas, Resoluciones de formatos de alta y de Avisos, y sus modificaciones</td></tr>
+      <tr><td class="k">I · b)</td><td>El contenido del propio Manual</td></tr>
+      <tr><td class="k">I · c)</td><td>Los actos u operaciones del artículo 17 de la Ley que se realizan</td></tr>
+      <tr><td class="k">I · d)</td><td>Los Riesgos a que está expuesto quien realiza la actividad</td></tr>
+      <tr><td class="k">II</td><td>Técnicas, métodos y tendencias relacionados con el artículo 400 Bis del Código Penal Federal</td></tr>
+      <tr><td class="k">III</td><td>Quien imparte acredita al menos cinco años de experiencia</td></tr>
+    </tbody>
+  </table></div>
+  <p>Los temas deben ser coherentes con los resultados de la metodología de riesgos y adecuarse a la responsabilidad de cada persona. Un curso externo cuenta, pero el inciso b), el Manual propio, sólo puede cubrirse por dentro: es el hueco más común cuando todo se compra afuera.</p>
+  <h3>La constancia sin evaluación no cumple</h3>
+  <ul class="marca">
+    <li>Para expedir constancias hay que <b>evaluar los conocimientos</b>. Una lista de asistencia no es una constancia.</li>
+    <li>El Manual debe decir <b>qué se hace con quien no obtiene resultado satisfactorio</b>. Casi ningún Manual lo trae.</li>
+    <li>Quien va a atender público o administrar recursos se capacita <b>antes o al mismo tiempo</b> que empieza, no al año siguiente.</li>
+    <li>La evidencia (programas, materiales, listas, evaluaciones, constancias) se conserva <b>diez años</b>, física o electrónicamente.</li>
+  </ul>
+  <p>Si quien realiza la actividad es una persona física sin empleados, la obligación no desaparece: se concentra en ella. No hay parámetro de horas en este régimen.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>18 fr. IX · 20, 3er y 4º párr.</span></span><span class="cita RCG"><i>RCG</i><span>39 Bis · 39 Bis 1</span></span><span class="cita RCG"><i>RCG</i><span>Trans. Séptimo</span></span></div>
+
+  <!-- Subtema 5 -->
+  <h3>5 · Criterios de selección de personal</h3>
+  <p class="dosr">La fracción que pide capacitar también pide seleccionar bien: calidad técnica, experiencia y honorabilidad, con declaración firmada de cada contratación.</p>
+  <div class="grid g2">
+    <div class="card"><p class="et">Contenido I</p><h4>Trayectoria</h4><p>En su caso, otros sectores sujetos a esta Ley en los que haya trabajado.</p></div>
+    <div class="card"><p class="et">Contenido II</p><h4>Honorabilidad declarada</h4><p>Que no ha sido sentenciada por delitos patrimoniales ni inhabilitada para ejercer el comercio o para un empleo, cargo o comisión en el servicio público o en el sistema financiero mexicano.</p></div>
+  </div>
+  <p>Los procedimientos, y las medidas para el personal que deje de tener calidad técnica u honorabilidad, van en el Manual o en otro documento propio. <b>Aplica a las contrataciones hechas a partir del 1 de marzo de 2027.</b> Al personal anterior no le es obligatoria la declaración; recabarla de forma escalonada es una decisión prudente que conviene dejar escrita. La declaración pide sólo lo que su finalidad justifica: no es un cuestionario abierto sobre la vida de nadie.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>18 fr. IX</span></span><span class="cita RCG"><i>RCG</i><span>39 Bis 2</span></span><span class="cita RCG"><i>RCG</i><span>Trans. Sexto</span></span></div>
+
+  <!-- Subtema 6 -->
+  <h3>6 · Auditoría anual y quién puede firmarla</h3>
+  <p class="dosr">Cada año alguien independiente califica si el cumplimiento funcionó. Su nivel de riesgo propio decide si basta un área interna o hace falta un auditor externo.</p>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Riesgo propio (metodología)</th><th>Quién puede dictaminar</th><th>Requisitos</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Bajo o medio</td><td>Área de auditoría interna o de control interno, <b>o</b> persona auditora externa independiente, a elección</td><td>Área interna: personal independiente de la Representante; conocimiento de los procesos internos; al menos una acreditación del programa anual de capacitación. No requiere certificación.</td><td>L 18 fr. XI · RCG 44</td></tr>
+      <tr><td class="k">Alto</td><td>Sólo persona auditora externa independiente</td><td>Título y cédula en derecho, contaduría, finanzas, administración, informática o afines y tres años de experiencia; <b>certificación vigente de la UIF al elaborar y firmar</b>; no sentenciada por delitos patrimoniales; sin servicios previos con conflicto de interés en el periodo; no haber sido Representante del auditado en el periodo ni dos años después; independiente hasta el dictamen.</td><td>RCG 45, incisos a) a e)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="banda">Certificación de la UIF: <strong>la convocatoria del artículo 34 Bis todavía no se publica</strong>. La UIF informó en octubre de 2026 que en 2026 no habrá proceso y que la certificación se realizará durante 2027, con convocatoria posterior a la entrada en vigor de las Reglas. Quien tenga riesgo alto debe seguir el DOF: sin esa certificación no hay auditor externo que pueda firmar el primer dictamen.</div>
+  <div class="citas"><span class="cita RCG"><i>RCG</i><span>34 Bis · 45 inciso b)</span></span></div>
+
+  <h3>Las fechas y lo que se entrega</h3>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Qué</th><th>Cuándo</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr><td>Primer periodo revisado</td><td>1 de enero a 31 de diciembre de 2028</td><td>RCG Trans. Octavo</td></tr>
+      <tr><td>Revisión y emisión del dictamen</td><td>Dentro de los tres meses siguientes al cierre</td><td>RCG 50</td></tr>
+      <tr><td>Entrega del dictamen, del auditor a usted</td><td>A más tardar el último día hábil de marzo; el primero, en marzo de 2029</td><td>RCG 50 con Trans. Octavo</td></tr>
+      <tr><td>Primer año de operaciones</td><td>Desde el inicio y hasta el 31 de diciembre del año siguiente</td><td>RCG 43</td></tr>
+      <tr><td>Conservación del dictamen y su soporte</td><td>No menos de cinco años desde la entrega</td><td>RCG 51</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Qué se califica.</b> La efectividad del cumplimiento de todas las obligaciones, no su existencia en papel. Cada obligación recibe una de cinco calificaciones: cumple, cumple mayoritariamente, cumple parcialmente, no cumple o no aplica. Sin evidencia objetiva, el techo es «cumple parcialmente». Cada hallazgo trae su acción correctiva, plazo, responsable y una proyección de las multas que se generarían si no se atiende.</p>
+  <p><b>A quién va.</b> El dictamen se presenta al consejo de administración, al administrador único, a la dirección general o, en su caso, a la persona física. <b>No se presenta al SAT</b>: se conserva y se exhibe si lo requiere.</p>
+  <p>Una figura que se confunde: el Comisario de la sociedad anónima rinde un dictamen de otra naturaleza, a la asamblea, sobre la información financiera. No sustituye este dictamen; podrá emitirlo sólo si reúne los requisitos de las Reglas.</p>
+  <div class="citas"><span class="cita L"><i>L</i><span>18 fr. XI</span></span><span class="cita RCG"><i>RCG</i><span>42 · 43 · 46 a 51</span></span></div>
+</section>
+
+<!-- ===================== EJEMPLOS ===================== -->
+<section class="bloque" id="ejemplos">
+  <h2>Casos resueltos</h2>
+  <p class="sub">Situaciones de negocio con su respuesta y su fundamento.</p>
+
+  <div class="caso"><p class="ch">Caso 1 · La designación que nadie aceptó</p>
+    <p>Una comercializadora de vehículos designó en acta de asamblea a su contadora como Representante. Ella nunca entró al Portal. Dos años después llega una visita de verificación. ¿Quién respondía?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div><b>El órgano de administración.</b> La designación se completa cuando la persona designada acepta en el Portal con su RFC y su e.firma. Mientras no hay aceptación, el cumplimiento de todas las obligaciones corresponde a quienes integran el órgano de administración o al administrador único. El acta no sustituye el acuse de aceptación. <span class="cita L"><i>L</i><span>20, 2º párr.</span></span> <span class="cita RCG"><i>RCG</i><span>10</span></span></div></details></div>
+
+  <div class="caso"><p class="ch">Caso 2 · La joyera que trabaja sola</p>
+    <p>Una persona física vende joyería y relojes, sin empleados. Pregunta si debe designar Representante, si debe capacitarse y quién aprueba una venta a una Persona Políticamente Expuesta de riesgo alto.</p>
+    <details class="resp"><summary>Ver respuesta</summary><div><b>No designa; sí se capacita; ella firma una constancia motivada.</b> La persona física cumple personal y directamente. La capacitación anual se concentra en ella, con evaluación y constancia. Para la PEP de riesgo alto, en lugar de la aprobación de un directivo, deja constancia de los motivos que consideró para realizar la operación, desde el 1 de marzo de 2027. <span class="cita L"><i>L</i><span>18 fr. IX · 20, 4º párr.</span></span> <span class="cita RCG"><i>RCG</i><span>23 Ter 5, 2º párr. · Trans. Cuarto</span></span></div></details></div>
+
+  <div class="caso"><p class="ch">Caso 3 · Riesgo medio, sin auditoría interna independiente</p>
+    <p>Una empresa con riesgo propio medio tiene una sola persona que lleva cumplimiento y control interno, y además es la Representante. Quiere que ella dictamine 2028 para no contratar a nadie.</p>
+    <details class="resp"><summary>Ver respuesta</summary><div><b>No puede.</b> El área interna que dictamina debe estar integrada por personal independiente de la Representante. Si no existe un área así, la vía interna queda cerrada y sólo resta la persona auditora externa independiente, con sus requisitos, incluida la certificación de la UIF. <span class="cita RCG"><i>RCG</i><span>44 · 45</span></span></div></details></div>
+
+  <div class="caso"><p class="ch">Caso 4 · El diplomado con diploma pero sin examen</p>
+    <p>Todo el personal tomó un curso externo de prevención de lavado. Hay lista de asistencia y diplomas, pero no hubo evaluación, y el curso no habló del Manual de la empresa.</p>
+    <details class="resp"><summary>Ver respuesta</summary><div><b>No acredita el programa completo.</b> Sin evaluación no pueden expedirse constancias válidas para esta materia, y falta el contenido mínimo del inciso b): el Manual propio. Hay que agregar una sesión interna sobre el Manual y aplicar evaluación; además, conservar la acreditación de los cinco años de quien impartió. <span class="cita RCG"><i>RCG</i><span>39 Bis fr. I b) y III · 39 Bis 1</span></span></div></details></div>
+</section>
+
+<!-- ===================== TRAMPAS ===================== -->
+<section class="bloque" id="trampas">
+  <h2>Trampas de lectura</h2>
+  <div class="trampa"><p class="et">Trampa</p><h4>«El Manual sólo vale si lo aprueba el consejo por acta»</h4><p>Ninguna disposición de la Ley, el Reglamento o las Reglas lo exige. Aprobarlo es buena práctica y deja evidencia útil; decir que es obligación, con artículo, desgasta la credibilidad de todo lo demás. Lo que sí debe presentarse al órgano de gobierno es el dictamen de auditoría.</p><div class="citas"><span class="cita RCG"><i>RCG</i><span>37 a 37 Bis 3</span></span><span class="cita RCG"><i>RCG</i><span>42, 2º párr.</span></span></div></div>
+  <div class="trampa"><p class="et">Trampa</p><h4>«Para ser Representante necesito estar certificada por la UIF»</h4><p>El texto dice «podrán obtener». La certificación es voluntaria para la Representante y para la persona física que realiza la actividad. Sólo es requisito para la persona auditora externa independiente, al momento de firmar el dictamen.</p><div class="citas"><span class="cita RCG"><i>RCG</i><span>34 Bis</span></span><span class="cita RCG"><i>RCG</i><span>45 inciso b)</span></span></div></div>
+  <div class="trampa"><p class="et">Trampa</p><h4>«Con la lista de asistencia ya tengo la constancia»</h4><p>Para expedir constancias hay que evaluar los conocimientos adquiridos, y el Manual debe decir qué pasa con quien no aprueba. La lista prueba que alguien estuvo, no que aprendió.</p><div class="citas"><span class="cita RCG"><i>RCG</i><span>39 Bis 1, 2º párr.</span></span></div></div>
+</section>
+
+<!-- ===================== DINÁMICA ===================== -->
+<section class="bloque" id="dinamica">
+  <span class="reloj">11:35 – 12:00 · en mesas</span>
+  <h2>Dinámica · «Arma tu área de cumplimiento» + revisión guiada del Manual</h2>
+  <div class="dinamica">
+    <div class="ficha"><div><b>Tiempo</b>25 min (12 + 8 + 5)</div><div><b>Formación</b>Mesas de 5 a 6</div><div><b>Material</b>Perfil de empresa, 7 tarjetas de rol, 17 tarjetas de tarea, Manual modelo descargable (apartados 11, 12, 13 y 20)</div><div><b>Objetivo</b>Asignar cada tarea a quien la norma se la da y localizar dónde queda escrita en el Manual</div></div>
+    <ol class="pasos">
+      <li><b>Reparto de perfiles.</b> Mesas 1, 4 y 7: perfil A. Mesas 2, 5 y 8: perfil B. Mesas 3 y 6: perfil C. Si alguna mesa trae el Manual de su propia empresa, puede usarlo en lugar del modelo.</li>
+      <li><b>Arme el área (12 min).</b> Coloque las siete tarjetas de rol en fila. Reparta las 17 tarjetas de tarea debajo del rol que la norma señala, según su perfil. Anote el fundamento en cada tarjeta. Lo que no es obligación va a la columna «No es norma».</li>
+      <li><b>Revisión guiada del Manual (8 min).</b> Abra el Manual modelo en el apartado 11 y llene las tres filas de la tabla 11.2 (responsable, actividad, documento que genera) con su perfil. Luego conteste las seis preguntas de revisión que aparecen abajo.</li>
+      <li><b>Puesta en común (5 min).</b> La instructora lee cuatro tarjetas al azar; la mesa que las tenga en el rol correcto, con fundamento, suma un punto. Cada mesa dice en voz alta un hueco que encontró en el Manual.</li>
+    </ol>
+  </div>
+
+  <h3>Los tres perfiles (ficticios)</h3>
+  <div class="grid g3">
+    <div class="card"><p class="et">Perfil A</p><h4>Autos Modelo, S.A. de C.V.</h4><p>Comercializa vehículos seminuevos (art. 17 fr. VIII). Consejo de tres personas, director general, 9 empleados: 5 vendedores, 1 caja, 2 administración, 1 contadora. Riesgo propio resultado de su metodología: <b>medio</b>. No tiene área de auditoría interna.</p></div>
+    <div class="card"><p class="et">Perfil B</p><h4>Joyería de la señora Méndez</h4><p>Persona física que vende joyas y relojes (art. 17 fr. VI). Atiende ella misma con una empleada de mostrador. Riesgo propio: <b>bajo</b>. Entre sus clientes hay una regidora municipal.</p></div>
+    <div class="card"><p class="et">Perfil C</p><h4>Desarrollos Modelo, S.A.P.I. de C.V.</h4><p>Recibe recursos para un desarrollo inmobiliario en preventa (art. 17 fr. V Bis). Consejo de cinco personas, dirección general, 25 empleados, área de contraloría interna de dos personas. Riesgo propio: <b>alto</b>.</p></div>
+  </div>
+
+  <h3>Las siete tarjetas de rol</h3>
+  <div class="grid g4">
+    <div class="card dark"><h4>R1 · Órgano de administración</h4><p>Consejo o administrador único</p></div>
+    <div class="card dark"><h4>R2 · Directivo</h4><p>Dirección general o equivalente</p></div>
+    <div class="card dark"><h4>R3 · Representante</h4><p>Encargada de Cumplimiento</p></div>
+    <div class="card dark"><h4>R4 · Personal operativo</h4><p>Atención al público, identificación, Avisos</p></div>
+    <div class="card dark"><h4>R5 · Capacitación y contratación</h4><p>Quien organiza cursos y contrata</p></div>
+    <div class="card dark"><h4>R6 · Auditoría</h4><p>Interna independiente o externa</p></div>
+    <div class="card dark"><h4>R7 · No es norma</h4><p>Buena práctica o mito</p></div>
+  </div>
+
+  <h3>Las 17 tarjetas de tarea, con su respuesta</h3>
+  <div class="grid g2">
+    <div class="caso"><p class="ch">Tarea 1</p><p>Entrar al Portal con su RFC y su e.firma para aceptar el cargo.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R3, la persona designada.</b> Nadie puede aceptar por ella. Perfil B: no aplica, la persona física no designa. <span class="cita RCG"><i>RCG</i><span>10</span></span> <span class="cita L"><i>L</i><span>20, 4º párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 2</p><p>Responder por todas las obligaciones mientras nadie haya aceptado el cargo.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R1.</b> Integrantes del órgano de administración o administrador único. Perfil B: ella misma, siempre. <span class="cita L"><i>L</i><span>20, 2º párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 3</p><p>Reportar en el Portal que cambió la persona Representante.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Quien realiza la actividad</b> (la empresa), mediante trámite de actualización, dentro de los seis días hábiles siguientes al hecho. El Manual debe decir qué cargo lo ejecuta. Perfil B: no aplica. <span class="cita RCG"><i>RCG</i><span>7</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 4</p><p>Escribir en el Manual las funciones y responsabilidades de la Representante.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Quien realiza la actividad, en el Manual</b>; suele redactarlo R3 y validarlo R1 (esto último es práctica, no norma). Es contenido mínimo. Perfil B: no hay Representante; conviene que su Manual lo diga expresamente. <span class="cita RCG"><i>RCG</i><span>37 Bis fr. X</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 5</p><p>Aprobar el Manual por acta del consejo para que tenga validez.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R7, no es norma.</b> Es buena práctica en A y C; ninguna disposición la exige ni condiciona la validez del Manual a ella. <span class="cita RCG"><i>RCG</i><span>37 a 37 Bis 3</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 6</p><p>Consentir una operación con una Persona Políticamente Expuesta que además tiene Grado de Riesgo alto.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R2, un directivo o su equivalente</b>, según diga el Manual. Perfil B: constancia de motivos firmada por ella. Aplica a operaciones desde el 1 de marzo de 2027. La regidora del perfil B sólo dispara esta tarjeta si su grado de riesgo resulta alto. <span class="cita RCG"><i>RCG</i><span>23 Ter 5 · Trans. Cuarto</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 7</p><p>Recibir capacitación por lo menos una vez al año.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R1, R2, R3 y R4, y R6 si es interna.</b> Consejo o administrador único, directivos, funcionarios, Representante y personal de atención al público, identificación, Avisos y auditoría. Perfil B: ella y su empleada de mostrador. <span class="cita RCG"><i>RCG</i><span>39 Bis</span></span> <span class="cita L"><i>L</i><span>20, 3er párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 8</p><p>Impartir la capacitación.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R5 la organiza; imparte quien acredite al menos cinco años</b> de experiencia en prevención de lavado de dinero, sea interno o externo. La acreditación se conserva en el expediente del programa. <span class="cita RCG"><i>RCG</i><span>39 Bis fr. III</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 9</p><p>Aplicar una evaluación antes de expedir la constancia, y decidir qué pasa con quien no aprueba.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R5 aplica; el Manual fija la medida</b> para quien no obtiene resultado satisfactorio. <span class="cita RCG"><i>RCG</i><span>39 Bis 1, 2º párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 10</p><p>Capacitar al vendedor nuevo antes o al mismo tiempo que empieza a atender clientes.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R5, coordinado con R3.</b> Es obligación para quien va a atender público o administrar recursos. <span class="cita RCG"><i>RCG</i><span>39 Bis 1, 3er párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 11</p><p>Firmar una declaración sobre trayectoria y honorabilidad al ser contratado.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Cada funcionario o empleado contratado desde el 1 de marzo de 2027</b>; R5 la recaba y la conserva. <span class="cita RCG"><i>RCG</i><span>39 Bis 2 · Trans. Sexto</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 12</p><p>Verificar cuando menos una vez al año que los expedientes de clientes con Relación de negocios estén completos y actualizados.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Quien realiza la actividad; el Manual modelo lo asigna a R3.</b> La norma no dice qué cargo; el Manual sí debe decirlo. <span class="cita RCG"><i>RCG</i><span>21</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 13</p><p>Dictaminar la efectividad del cumplimiento del año 2028.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Depende del perfil.</b> A (medio): podría ser un área interna independiente de la Representante, pero no la tiene; queda R6 externo. B (bajo): sin área interna, externo. C (alto): sólo auditor externo independiente, aunque tenga contraloría. <span class="cita L"><i>L</i><span>18 fr. XI</span></span> <span class="cita RCG"><i>RCG</i><span>44 · 45</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 14</p><p>Tener certificación vigente de la UIF al firmar el dictamen.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R6, sólo si es auditor externo.</b> Al área interna no se le exige. Al corte de las fuentes, la convocatoria no se había publicado. <span class="cita RCG"><i>RCG</i><span>45 inciso b) · 34 Bis</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 15</p><p>Recibir el dictamen y dar seguimiento a las acciones correctivas.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R1</b> (o dirección general u órgano equivalente). Perfil B: lo recibe ella. Las acciones correctivas deben procurar atenderse antes del siguiente periodo o en los plazos que fije el auditor. <span class="cita RCG"><i>RCG</i><span>42, 2º párr. · 50, 2º párr.</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 16</p><p>Acudir a una diligencia cuando una autoridad cita a la Representante por sus funciones.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>Puede desahogarla el representante legal o apoderado</b> de la empresa, para proteger la identidad de la Representante. <span class="cita L"><i>L</i><span>38 · 41 Bis</span></span></div></details></div>
+    <div class="caso"><p class="ch">Tarea 17</p><p>Firmar electrónicamente el envío de los Avisos de la empresa.</p>
+      <details class="resp"><summary>Ver respuesta</summary><div><b>R4 los prepara, pero se envían con la e.firma de la persona moral</b>, asociada a su propio RFC, no con la del representante legal. Es causa frecuente de rechazo. Perfil B: su propia e.firma. <span class="cita RCG"><i>RCG</i><span>24, 2º párr.</span></span></div></details></div>
+  </div>
+
+  <h3>Revisión guiada del Manual modelo: seis preguntas</h3>
+  <div class="caso"><p class="ch">Apartado 11 · Representante</p><p>¿Qué documento acredita que la designación está completa? ¿Quién responde mientras tanto?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>El <b>acuse de aceptación en el Portal</b>, no la carta de designación. Mientras tanto, el órgano de administración o el administrador único. <span class="cita RCG"><i>RCG</i><span>10</span></span> <span class="cita L"><i>L</i><span>20</span></span></div></details></div>
+  <div class="caso"><p class="ch">Apartado 11 · Procedimiento</p><p>Llene las tres filas de la tabla 11.2. ¿Cada paso tiene un cargo (no un nombre), un verbo de acción y un documento que genera?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>Ejemplo para el perfil A: 1) Dirección general · designa en el Portal · acuse de designación. 2) Persona designada · acepta con su e.firma · acuse de aceptación. 3) Contadora · verifica cada trimestre la vigencia y reporta cambios dentro de 6 días hábiles · bitácora de verificación y acuse de actualización. Si un paso no deja documento, es una intención. <span class="cita RCG"><i>RCG</i><span>7 · 10</span></span></div></details></div>
+  <div class="caso"><p class="ch">Apartado 12 · Capacitación</p><p>¿Qué hace la empresa con quien no aprueba la evaluación? ¿Está escrita la capacitación previa o simultánea al ingreso?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>El modelo deja un corchete para que la empresa describa la medida (repetir el curso en un plazo, no operar hasta acreditar). Si su Manual no lo llena, falta un contenido exigible. La capacitación previa o simultánea sí viene en la cláusula modelo. <span class="cita RCG"><i>RCG</i><span>39 Bis 1</span></span></div></details></div>
+  <div class="caso"><p class="ch">Apartado 13 · Auditoría</p><p>¿El Manual distingue quién dictamina según el riesgo propio, y dice a qué órgano se presenta el dictamen?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>Sí: área interna independiente con riesgo bajo o medio; externo independiente con riesgo alto o por elección; resultados al consejo, administrador único o dirección general. Revise que su empresa haya escogido el órgano y lo haya escrito. <span class="cita RCG"><i>RCG</i><span>42 · 44 · 45</span></span></div></details></div>
+  <div class="caso"><p class="ch">Apartado 20 · Selección de personal</p><p>¿Trae el texto de la declaración firmada y la fecha desde la que aplica? ¿Qué medidas toma si alguien deja de cumplir?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>Debe traer los dos contenidos mínimos de la declaración, su aplicación a contrataciones desde el 1 de marzo de 2027 y las medidas para quien deje de tener calidad técnica u honorabilidad. <span class="cita RCG"><i>RCG</i><span>39 Bis 2 · Trans. Sexto</span></span></div></details></div>
+  <div class="caso"><p class="ch">Cierre de la revisión</p><p>Elija el apartado que peor quedó en su mesa. ¿Qué plano le falta: regla, criterio, procedimiento o evidencia?</p>
+    <details class="resp"><summary>Ver respuesta</summary><div>Lo más frecuente es que falte la evidencia: el apartado dice qué se hace, pero no qué rastro deja ni dónde se guarda. Ese hueco es el que baja la calificación a «cumple parcialmente». <span class="cita RCG"><i>RCG</i><span>48</span></span></div></details></div>
+</section>
+
+<!-- ===================== REPASO ===================== -->
+<section class="bloque" id="repaso">
+  <h2>Para volver a consultar</h2>
+  <ul class="marca">
+    <li>La designación de la Representante se completa con la <b>aceptación en el Portal</b>; mientras no la haya, responde el órgano de administración (L 20; RCG 10).</li>
+    <li>La persona física que realiza la actividad <b>no designa</b> Representante: cumple personalmente (L 20, 4º párr.).</li>
+    <li>El Manual se <b>elabora y se observa</b>; tiene catorce fracciones mínimas y vence con la metodología el <b>1 de marzo de 2027</b> (L 18 fr. VIII; RCG 37 Bis; Trans. Tercero).</li>
+    <li>El acta de aprobación del Manual es buena práctica, <b>no obligación</b>; lo que va al órgano de gobierno es el dictamen (RCG 42).</li>
+    <li>Primer periodo de capacitación: <b>1 de enero a 31 de diciembre de 2027</b>; sin evaluación no hay constancia; evidencia diez años (RCG 39 Bis 1; Trans. Séptimo).</li>
+    <li>Selección de personal con declaración firmada para <b>contrataciones desde el 1 de marzo de 2027</b> (RCG 39 Bis 2; Trans. Sexto).</li>
+    <li>Auditoría: primer periodo <b>2028</b>; riesgo bajo o medio, área interna independiente o externo; riesgo alto, sólo externo <b>con certificación UIF</b>, cuya convocatoria aún no se publica; la UIF la anunció para 2027 (RCG 44, 45; Trans. Octavo).</li>
+  </ul>
+
+  <h3>Compruebe lo que aprendió</h3>
+  <div class="qbar"><span class="sc">0 de 0 correctas</span></div>
+
+  <div class="q" data-ok="2"><p class="qh">Pregunta 1 · caso práctico</p><p class="qt">Una empresa designó a su Representante el 3 de febrero; la persona aceptó en el Portal el 20 de febrero. Un Aviso se omitió el 10 de febrero. ¿Quién respondía ese día?</p>
+    <button class="op">La persona designada, desde la fecha del acta de asamblea</button><button class="op">Nadie, porque el trámite de designación estaba en curso</button><button class="op">El órgano de administración o el administrador único</button><button class="op">El SAT, por no haber notificado en diez días</button>
+    <div class="x"><b>Correcta: el órgano de administración.</b> La designación se completa con la aceptación; antes de ella, el cumplimiento corresponde a quienes integran el órgano de administración. El distractor tentador es «la persona designada»: la fecha del acta no la hace Representante. Fundamento: L 20, 2º párr.; RCG 10.</div></div>
+
+  <div class="q" data-ok="0"><p class="qh">Pregunta 2</p><p class="qt">¿Cuál de estas afirmaciones sobre el Manual de Políticas Internas es correcta?</p>
+    <button class="op">Debe contener las funciones y responsabilidades de la Representante</button><button class="op">Debe registrarse ante el SAT dentro de los noventa días del alta</button><button class="op">Sólo es válido si lo aprueba el consejo por acta</button><button class="op">Puede omitir las fracciones que la empresa considere poco relevantes</button>
+    <div class="x"><b>Correcta: las funciones de la Representante.</b> Es la fracción X del contenido mínimo. El Manual no se registra: se pone a disposición. La exención sólo cabe para supuestos que la empresa declara no realizar, no para fracciones «poco relevantes». Fundamento: RCG 37, 37 Bis fr. X y 37 Bis 2.</div></div>
+
+  <div class="q" data-ok="3"><p class="qh">Pregunta 3 · caso práctico</p><p class="qt">Una empresa con riesgo propio alto tiene una contraloría interna independiente, capacitada y que conoce sus procesos. ¿Quién puede dictaminar 2028?</p>
+    <button class="op">Su contraloría interna, porque cumple los tres requisitos</button><button class="op">Su Representante, si tiene certificación de la UIF</button><button class="op">Su Comisario, por ley</button><button class="op">Sólo una persona auditora externa independiente</button>
+    <div class="x"><b>Correcta: sólo el externo.</b> Con riesgo alto no hay opción interna, aunque el área cumpla los requisitos del artículo 44, que sólo opera con riesgo bajo o medio. El externo además debe tener certificación UIF vigente. Fundamento: L 18 fr. XI; RCG 44 y 45.</div></div>
+
+  <div class="q" data-ok="1"><p class="qh">Pregunta 4 · caso práctico</p><p class="qt">Se contrata a un vendedor el 15 de abril de 2027. ¿Qué corresponde?</p>
+    <button class="op">Capacitarlo en el siguiente curso anual del programa, previsto para diciembre</button><button class="op">Declaración firmada y capacitación antes o al empezar a atender público</button><button class="op">Sólo pedirle su constancia de no antecedentes penales antes de firmar contrato</button><button class="op">Nada todavía, porque la selección de personal aplica a contrataciones desde 2028</button>
+    <div class="x"><b>Correcta: declaración y capacitación previa o simultánea.</b> La contratación es posterior al 1 de marzo de 2027, así que aplica la declaración; y quien atiende público se capacita antes o al ingresar. El distractor de «diciembre» confunde el ciclo anual con el ingreso. Fundamento: RCG 39 Bis 1, 3er párr.; 39 Bis 2; Trans. Sexto.</div></div>
+
+  <div class="q" data-ok="2"><p class="qh">Pregunta 5</p><p class="qt">¿Qué ocurre con el primer dictamen de auditoría?</p>
+    <button class="op">Se presenta al SAT a más tardar el 17 de abril de 2029, con su acuse</button><button class="op">Cubre el año 2027 y se entrega al SAT en el mes de marzo de 2028</button><button class="op">Cubre 2028 y el auditor lo entrega a la empresa en marzo de 2029</button><button class="op">Se presenta a la UIF junto con la certificación vigente del auditor</button>
+    <div class="x"><b>Correcta: cubre 2028 y se entrega a la empresa en marzo de 2029.</b> No se presenta al SAT; se conserva cinco años y se exhibe si se requiere. El distractor de 2027 confunde el primer año de capacitación con el primer año auditado. Fundamento: RCG 50 y 51; Trans. Octavo.</div></div>
+</section>
+
+<!-- ===================== DESCARGAS ===================== -->
+<section class="bloque" id="descargas">
+  <h2>Descargas y herramientas</h2>
+  <div class="dl">
+    <a href="../descargables/Manual_Politicas_Internas_Modelo.docx" download><b>Manual de Políticas Internas · modelo</b><span>Veintitrés apartados con criterio, cláusula modelo, tabla de procedimiento y evidencia, mapeados a las catorce fracciones. Es el que se usa en la dinámica.</span></a>
+    <a href="../descargables/Guia_Redaccion_Manual.docx" download><b>Guía de redacción del Manual</b><span>El método de los cuatro planos, dos fracciones desarrolladas como modelo y los seis errores que tiran un Manual en una revisión.</span></a>
+    <a href="../descargables/Programa_Capacitacion.xlsx" download><b>Programa anual de capacitación</b><span>Personal obligado, programa con semáforo de contenidos mínimos, evidencia a diez años, constancias y evaluaciones, selección de personal y calendario 2027.</span></a>
+    <a href="../herramientas/diagnostico-manual.html"><b>Diagnóstico de su Manual · en línea</b><span>Dieciocho renglones del contenido mínimo con calificación inmediata y la lista de qué escribir primero. Se contesta en el navegador; nada se envía.</span></a>
+  </div>
+</section>
+
+<div class="modnav"><a href="../m4/index.html"><small>&#8592; Anterior</small>Módulo 4 · Penas, sanciones y responsabilidad</a><a class="sig" href="../m6/index.html"><small>Siguiente &#8594;</small>Módulo 6 · Identificación y conocimiento del cliente</a></div>
+<p class="aviso">Material de consulta del curso–taller. No sustituye la lectura de la norma ni constituye asesoría jurídica. Fuentes: Ley y Reglamento vigentes, Reglas de Carácter General con el ACUERDO 115/2026 (DOF 7-ago-2026).</p>
+</div>
+<footer><div class="wrap"><b>Curso–taller PLD/FT · Actividades Vulnerables</b>GMC360 Oterces Consultores de México · 360Educa · Maribel Vázquez Menchaca</div></footer>
+<script src="../app.js"></script>
+</body>
+</html>

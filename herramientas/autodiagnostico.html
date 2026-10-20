@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="es-MX">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Autodiagnóstico de brecha · Reforma a la LFPIORPI 2026 | GMC360</title>
+<meta content="27 preguntas, menos de 30 minutos. Mide qué tan lejos estás de cumplir el ACUERDO 115/2026 y qué te falta antes del 30 de noviembre. Gratuito y sin registro." name="description"/>
+<meta content="#12224A" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Autodiagnóstico de brecha · Reforma a la LFPIORPI" property="og:title"/>
+<meta content="27 preguntas, menos de 30 minutos. Descubre qué te falta antes del 30 de noviembre de 2026. Gratis y sin registro." property="og:description"/>
+
+<meta content="es_MX" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="index,follow" name="robots"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%2312224A'/&gt;&lt;text x='16' y='23' font-size='19' font-family='Georgia' font-weight='bold' fill='%23F2A541' text-anchor='middle'&gt;A&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<style>
+:root{--navy:#12224A;--navy2:#1E2761;--navy3:#1B3061;--ice:#CADCFC;--amber:#F2A541;
+--red:#B3261E;--green:#1B5E3F;--orange:#C4622B;--gray:#5A6472;--light:#F4F6FA;--ink:#16202E;--line:#E2E7F0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+color:var(--ink);background:#fff;line-height:1.5;font-size:16px}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+header{background:var(--navy);color:#fff;padding:30px 0 26px}
+.kick{color:var(--amber);font-size:11px;font-weight:800;letter-spacing:2.4px;margin:0 0 10px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0 0 10px;line-height:1.18}
+header p{color:var(--ice);margin:0;font-size:15.5px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.badge{background:var(--navy3);border-radius:20px;padding:6px 14px;font-size:12.5px;color:var(--ice);font-weight:600}
+.sticky{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);padding:11px 0;box-shadow:0 2px 10px rgba(18,34,74,.06)}
+.sticky .wrap{display:flex;align-items:center;gap:14px}
+.bar{flex:1;height:9px;background:var(--line);border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .25s}
+.cnt{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap}
+main{padding:26px 0 40px}
+.blk{margin:0 0 10px;font-family:Georgia,serif;font-size:20px;color:var(--navy);padding-top:20px;scroll-margin-top:70px}
+.q{border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:11px;background:#fff;scroll-margin-top:76px}
+.q.done{background:var(--light)}
+.qt{font-size:15.5px;font-weight:600;margin:0 0 4px}
+.fund{font-size:12px;color:var(--gray);margin:0 0 3px}
+.when{font-size:12px;color:#8A5A12;margin:0 0 11px}
+.p3{display:inline-block;background:#FBEEEC;color:var(--red);font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:7px;vertical-align:2px;letter-spacing:.4px}
+.opts{display:flex;gap:7px;flex-wrap:wrap}
+.opts label{flex:1;min-width:78px}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:block;text-align:center;padding:10px 6px;border:1.5px solid var(--line);border-radius:9px;
+font-size:13.5px;font-weight:600;cursor:pointer;color:var(--gray);transition:.12s;user-select:none}
+.opts input:focus-visible+span{outline:3px solid var(--amber);outline-offset:2px}
+.opts input:checked+span{color:#fff;border-color:transparent}
+.o-si input:checked+span{background:var(--green)}
+.o-pa input:checked+span{background:var(--orange)}
+.o-no input:checked+span{background:var(--red)}
+.o-na input:checked+span{background:#6B7480}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}
+button{font-family:inherit;font-size:15.5px;font-weight:700;padding:14px 24px;border-radius:10px;border:0;cursor:pointer}
+.primary{background:var(--amber);color:var(--navy)}
+.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+#res{display:none;scroll-margin-top:70px}
+.score{border-radius:14px;padding:26px 22px;color:#fff;margin-bottom:20px}
+.score .lvl{font-size:13px;font-weight:800;letter-spacing:2.2px;opacity:.9;margin:0 0 6px}
+.score .pct{font-family:Georgia,serif;font-size:62px;font-weight:bold;line-height:1;margin:0}
+.score .txt{margin:12px 0 0;font-size:16px;max-width:640px}
+h2{font-family:Georgia,serif;font-size:22px;color:var(--navy);margin:28px 0 12px}
+.blkrow{display:flex;align-items:center;gap:12px;margin-bottom:9px}
+.blkrow .n{flex:0 0 172px;font-size:13.5px;font-weight:600}
+.blkrow .b{flex:1;height:19px;background:var(--line);border-radius:5px;overflow:hidden}
+.blkrow .b i{display:block;height:100%;border-radius:5px}
+.blkrow .v{flex:0 0 44px;text-align:right;font-size:13px;font-weight:800}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+th{background:var(--navy2);color:#fff;text-align:left;padding:9px 11px;font-size:12.5px}
+td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top}
+.tag{display:inline-block;padding:3px 9px;border-radius:11px;font-size:11px;font-weight:800;color:#fff;white-space:nowrap}
+.urg{background:var(--red)}.pro{background:var(--orange)}
+.note{background:#FDF3E3;border:1px solid var(--amber);border-radius:11px;padding:16px 18px;font-size:14px;color:#6B4A12;margin:22px 0}
+.note b{color:#8A5A12}
+footer{background:var(--navy);color:#8FA4C9;padding:26px 0 34px;font-size:12.5px}
+footer b{color:#fff}
+footer a{color:var(--ice)}
+@media(max-width:620px){h1{font-size:24px}.score .pct{font-size:50px}.blkrow .n{flex-basis:118px;font-size:12.5px}
+.opts label{min-width:0;flex:1 1 46%}}
+@media print{.sticky,.acts,header .badges,#preg,button{display:none!important}
+#res{display:block!important}body{font-size:12px}.score{color:#000!important;border:2px solid #000}}
+
+  /* ── Nomenclatura de ordenamientos ── */
+  .ref{display:inline-block;font-size:.62em;font-weight:700;letter-spacing:.5px;
+       line-height:1;padding:2px 5px;border-radius:4px;margin-left:3px;
+       vertical-align:.28em;white-space:nowrap;font-family:Calibri,"Segoe UI",Arial,sans-serif}
+  .r-l  {background:#E3E9F7;color:#12224A}
+  .r-r  {background:#E4F2EB;color:#245C45}
+  .r-rcg{background:#FDF1DC;color:#8C570D}
+  .r-cpf{background:#F3E6F2;color:#6B2160}
+  .leyenda{background:#fff;border:1px solid #E2E7F0;border-left:5px solid #12224A;
+           border-radius:10px;padding:12px 18px;margin:18px 0;font-size:13.5px;line-height:1.8}
+  .leyenda b{color:#12224A}
+</style>
+</head>
+<body>
+<div style="background:#0B172E;font:600 13px/1 Arial,Helvetica,sans-serif"><div style="max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap"><a href="../index.html" style="color:#F2A541;text-decoration:none">← Todos los módulos</a><span style="color:#7D8DB0">Herramientas del curso</span></div></div>
+<header><div class="wrap">
+<p class="kick">GMC360 · 360EDUCA</p>
+<h1>Autodiagnóstico de brecha</h1>
+<p>¿Qué tan lejos estás de cumplir el ACUERDO 115/2026? Veintisiete preguntas, menos de treinta minutos, resultado inmediato.</p>
+<div class="badges">
+<span class="badge">Gratuito y sin registro</span>
+<span class="badge">No guarda ni envía tus datos</span>
+<span class="badge" id="dias">— días para la entrada en vigor</span>
+<a class="badge" href="umbrales.html" style="text-decoration:none;background:var(--amber);color:var(--navy);font-weight:800">Ver la guía completa de la reforma →</a>
+</div>
+</div></header>
+<div class="sticky"><div class="wrap">
+<div class="bar"><i id="prog"></i></div>
+<span class="cnt" id="cnt">0 de 27</span>
+</div></div>
+<main class="wrap">
+<div class="note" style="margin-top:0"><b>Contesta como estás hoy, no como piensas estar en 2027.</b> Si respondes pensando en lo que vas a hacer, el resultado no te sirve: lo que se mide aquí es la brecha real. Usa «No aplica» sólo cuando la obligación verdaderamente no te alcanza.</div>
+<div class="note" style="border-left-color:#12224A"><b>Cómo leer el fundamento de cada pregunta.</b> Debajo de cada una se cita el artículo que la respalda, con la marca del ordenamiento del que proviene: <b>RCG</b> son las Reglas de Carácter General del ACUERDO 115/2026 —de donde sale la mayoría—, <b>L</b> es la Ley, <b>R</b> el Reglamento y <b>CPF</b> el Código Penal Federal. La precisión importa: hay números de artículo que existen en los tres con contenido distinto.</div>
+<div id="preg"></div>
+<div class="acts">
+<button class="primary" onclick="calcular()">Ver mi resultado</button>
+<button class="ghost" onclick="limpiar()">Limpiar respuestas</button>
+</div>
+<div id="res"></div>
+</main>
+<footer><div class="wrap">
+<b>Fuentes.</b> LFPIORPI, reforma publicada en el Diario Oficial de la Federación el 16 de julio de 2025 · Reglamento de la Ley, reforma publicada el 27 de marzo de 2026 · <b>ACUERDO 115/2026</b>, por el que se modifican las Reglas de Carácter General a que se refiere la LFPIORPI, publicado en el Diario Oficial de la Federación el viernes 7 de agosto de 2026.<br/><br/>
+<b>Nota.</b> Este autodiagnóstico es material de apoyo académico y no constituye asesoría legal ni dictamen para un caso concreto: una calificación alta no acredita cumplimiento ante la autoridad. Este material se mantiene vivo: si en el camino detectamos cualquier error o algo que convenga precisar, se actualiza a su versión más reciente en esta misma liga.<br/><br/>
+GMC360 · 360Educa · versión 1.1 · 12 de agosto de 2026
+</div></footer>
+<script>
+const P=[{"b":"Alcance","t":"¿Sabe con certeza en qué fracciones del artículo 17 L está su operación —todas, no sólo la principal—?","f":"Artículo 17 de la Ley","p":3,"w":"Empiece por aquí: todo lo demás depende de esto."},{"b":"Alcance","t":"¿Su alta y registro refleja la forma real en que opera hoy, incluidos fideicomisos o figuras jurídicas?","f":"Artículo 4, fracciones III y IV RCG · Anexos 2 Bis y 2 Ter","p":2,"w":"Antes del 30 de noviembre de 2026."},{"b":"El dato de 2026","t":"¿Tiene identificado quién resguarda los datos de 2026: número de Clientes, número de operaciones y monto operado?","f":"Transitorio Segundo · artículo 10 Septies 2 RCG","p":3,"w":"Esta semana. Es lo único que no se recupera después."},{"b":"El dato de 2026","t":"¿Puede reconstruir hoy doce meses continuos de esa información?","f":"Artículo 10 Septies 2 RCG","p":2,"w":"Si no, empiece a capturarla desde este mes."},{"b":"Cliente y expediente","t":"¿Integra un expediente único por cliente, con todos los datos y documentos en un mismo archivo?","f":"Artículo 12 RCG","p":2,"w":"Desde el 30 de noviembre de 2026."},{"b":"Cliente y expediente","t":"¿Clasifica a cada Cliente en al menos tres grados de riesgo y lo reevalúa cada seis meses?","f":"Artículos 23 Bis y 23 Bis 1 RCG","p":3,"w":"1 de marzo de 2027, hacia adelante."},{"b":"Cliente y expediente","t":"¿Determina el perfil transaccional de cada cliente y tiene un sistema de alertas cuando la operación se aparta de él?","f":"Artículos 23 Ter 1 y 23 Ter 2 RCG","p":3,"w":"1 de marzo de 2027."},{"b":"Cliente y expediente","t":"¿Verifica al menos una vez al año que los expedientes de clientes con relación de negocios estén completos y actualizados?","f":"Artículo 21 RCG","p":2,"w":"Anual, desde la entrada en vigor."},{"b":"Beneficiario controlador","t":"¿Aplica y documenta el orden de prelación para identificar al beneficiario controlador de sus clientes persona moral?","f":"Artículo 23 Quinquies RCG","p":3,"w":"1 de marzo de 2027."},{"b":"Beneficiario controlador","t":"¿Tiene por escrito el criterio de hasta dónde asciende en la cadena de control y cómo trata a los fideicomisos?","f":"Artículo 23 Quinquies 1 RCG","p":2,"w":"Es criterio propio: si no está escrito, no existe."},{"b":"Avisos","t":"¿Concilia periódicamente su facturación —CFDI— contra los Avisos presentados, para detectar operaciones que rebasaron el umbral y no se avisaron?","f":"Artículos 17 y 23 de la Ley · práctica de control interno","p":3,"w":"Hágalo antes de que lo haga la autoridad. Es el cruce más fácil de correr desde afuera."},{"b":"Avisos","t":"¿Tiene definido cómo acumula las operaciones de un mismo cliente en periodos de hasta seis meses?","f":"Artículo 19 · penúltimo párrafo del artículo 17 de la Ley","p":2,"w":"Desde el 30 de noviembre de 2026."},{"b":"Avisos","t":"¿Sabe qué fecha del acto u operación aplica a cada una de sus actividades para computar el plazo del Aviso?","f":"Artículo 24 Bis RCG","p":2,"w":"Desde la entrada en vigor. No todas las fracciones están en el artículo: algunas se buscan en el Reglamento."},{"b":"Avisos","t":"¿Tiene un procedimiento escrito para el Aviso de veinticuatro horas por sospecha o por hechos e indicios?","f":"Artículos 26 Bis, 26 Bis 1 y 26 Bis 2 RCG","p":2,"w":"El plazo corre desde que se reconoce el hecho, no desde la operación."},{"b":"Avisos","t":"¿Revisó los Avisos de los últimos dos años, antes de que alguien más los revise?","f":"Artículo 55 de la Ley","p":2,"w":"Ahora, mientras la autocorrección siga disponible."},{"b":"Manual","t":"¿Su Manual contiene las catorce fracciones del artículo 37 Bis RCG —y dice lo que su organización realmente hace?","f":"Artículo 37 Bis RCG","p":3,"w":"Antes del 1 de marzo de 2027. Un manual que no describe la operación real se cae en la primera prueba."},{"b":"Manual","t":"¿Incluye el diseño de la metodología y los criterios de apertura, limitación y terminación de relaciones comerciales?","f":"Artículo 37 RCG, párrafos segundo y tercero","p":2,"w":"Puede ir en el Manual o en otro documento propio, pero tiene que existir."},{"b":"Manual","t":"¿Dice qué funciones, qué autoridad y qué suplencia tiene la persona Representante Encargada de Cumplimiento?","f":"Artículo 37 Bis, fracción X RCG","p":2,"w":"Antes del 30 de noviembre de 2026."},{"b":"Metodología y sistemas","t":"¿Tiene una metodología escrita de riesgos con los cuatro elementos, sus indicadores, un método de medición y los mitigantes?","f":"Capítulo II Quáter · artículo 10 Septies 1 RCG","p":3,"w":"1 de marzo de 2027 — pero se construye con datos de 2026."},{"b":"Metodología y sistemas","t":"¿Incluye indicadores relacionados con los delitos de los artículos 139 Quáter y 400 Bis CPF, para cada elemento de riesgo?","f":"Artículo 10 Septies 1, fracción III RCG","p":2,"w":"Es requisito expreso, no opcional."},{"b":"Metodología y sistemas","t":"¿Sus mecanismos automatizados cumplen las seis funciones: expediente, base consolidada, insumo a la metodología, ejecución del modelo, alertas y monitoreo de efectivo y metales?","f":"Artículo 41 RCG","p":3,"w":"1 de junio de 2027, con información desde esa fecha."},{"b":"Metodología y sistemas","t":"¿Conserva el historial de cambios de grado de riesgo y de perfil transaccional por al menos diez años?","f":"Artículo 41, fracción IV RCG","p":2,"w":"Si el sistema sobrescribe, la historia se pierde y no se reconstruye."},{"b":"Personas y capacitación","t":"¿La persona designada como Representante Encargada de Cumplimiento aceptó el cargo en el Portal con su e.firma?","f":"Artículo 10 · artículo 20 de la Ley","p":2,"w":"Antes del 30 de noviembre de 2026."},{"b":"Personas y capacitación","t":"¿Tiene programa anual de capacitación con evaluación, constancias y evidencia conservada diez años, impartido por quien acredite cinco años de experiencia?","f":"Artículos 39 Bis y 39 Bis 1 RCG","p":2,"w":"Primer periodo completo: 2027."},{"b":"Personas y capacitación","t":"¿Alguien consulta el buzón de notificaciones electrónicas cada día hábil?","f":"Artículos 5 Bis y 6 RCG","p":2,"w":"Desde el 30 de noviembre de 2026. La notificación surte al cuarto día hábil, se abra o no."},{"b":"Evidencia y auditoría","t":"Si le pidieran hoy la evidencia de una decisión de riesgo que tomó, ¿podría mostrarla con fecha y responsable?","f":"Artículo 48, fracción III RCG · evidencia objetiva","p":3,"w":"Es lo que califica el dictamen. Un control sin rastro no llega a «Cumple»."},{"b":"Evidencia y auditoría","t":"¿Sabe ya si su auditoría del ejercicio 2028 será interna o externa —y si es externa, tiene con quién?","f":"Artículos 44 y 45 RCG","p":2,"w":"Decidirlo en 2026: el auditor certificado va a escasear."}];
+const OPTS=[["si","Sí","o-si"],["parcial","En parte","o-pa"],["no","No","o-no"],["na","No aplica","o-na"]];
+const CODE={si:"s",parcial:"p",no:"n",na:"x"}, DECODE={s:"si",p:"parcial",n:"no",x:"na"};
+
+// contador de días
+(function(){const t=new Date("2026-11-30T00:00:00"),n=new Date();n.setHours(0,0,0,0);
+const d=Math.max(0,Math.round((t-n)/86400000));
+document.getElementById("dias").textContent=d+" días para la entrada en vigor";})();
+
+// pintar preguntas
+const cont=document.getElementById("preg");
+let ultimo=null;
+P.forEach((q,i)=>{
+  if(q.b!==ultimo){const h=document.createElement("h2");h.className="blk";h.textContent=q.b;cont.appendChild(h);ultimo=q.b;}
+  const d=document.createElement("div");d.className="q";d.id="q"+i;
+  d.innerHTML='<p class="qt">'+q.t+(q.p===3?'<span class="p3">PESO ALTO</span>':'')+'</p>'+
+    '<p class="fund">'+q.f+'</p><p class="when">'+q.w+'</p><div class="opts">'+
+    OPTS.map(o=>'<label class="'+o[2]+'"><input type="radio" name="q'+i+'" value="'+o[0]+'"><span>'+o[1]+'</span></label>').join("")+
+    '</div>';
+  cont.appendChild(d);
+});
+cont.addEventListener("change",e=>{if(e.target.name){document.getElementById("q"+e.target.name.slice(1)).classList.add("done");prog();}});
+
+function val(i){const e=document.querySelector('input[name=q'+i+']:checked');return e?e.value:null}
+function prog(){let n=0;P.forEach((q,i)=>{if(val(i))n++});
+  document.getElementById("cnt").textContent=n+" de "+P.length;
+  document.getElementById("prog").style.width=(n/P.length*100)+"%";}
+function limpiar(){document.querySelectorAll('input[type=radio]').forEach(e=>e.checked=false);
+  document.querySelectorAll('.q').forEach(e=>e.classList.remove("done"));
+  history.replaceState(null,"",location.pathname);prog();
+  document.getElementById("res").style.display="none";window.scrollTo({top:0,behavior:"smooth"});}
+
+function calcular(){
+  let obt=0,tot=0,pend=[],blk={},sinContestar=0,cadena="";
+  P.forEach((q,i)=>{
+    const v=val(i); cadena+=v?CODE[v]:"-";
+    if(!v){sinContestar++;return}
+    blk[q.b]=blk[q.b]||{o:0,t:0};
+    if(v==="na")return;
+    tot+=q.p*2;
+    const g=(v==="si")?2:(v==="parcial")?1:0;
+    obt+=g*q.p; blk[q.b].o+=g*q.p; blk[q.b].t+=q.p*2;
+    if(v!=="si")pend.push({q:q,g:g});
+  });
+  const pct=tot?Math.round(obt/tot*100):0;
+  let lvl,col,txt;
+  if(pct>=80){lvl="Avanzado";col="#1B5E3F";txt="Tu sistema está en condiciones de sostener una revisión. El trabajo que queda es de evidencia y de mantenimiento, no de construcción.";}
+  else if(pct>=55){lvl="En construcción";col="#C4622B";txt="Tienes las piezas principales, pero hay huecos que en 2028 se leen como «Cumple parcialmente». Todavía hay tiempo para cerrarlos con orden.";}
+  else if(pct>=30){lvl="Inicial";col="#C4622B";txt="El marco existe en papel pero no está operando. La prioridad es empezar a generar y guardar información propia, hoy.";}
+  else {lvl="Sin arranque";col="#B3261E";txt="No hay todavía un sistema que pueda demostrarse. Lo urgente no es documentar: es empezar a capturar datos y decisiones este mes.";}
+
+  pend.sort((a,b)=>(b.q.p-a.q.p)||(a.g-b.g));
+  const filas=pend.slice(0,8).map(x=>
+    "<tr><td>"+(x.q.p===3?'<span class="tag urg">Prioridad alta</span>':'<span class="tag pro">Atender</span>')+
+    "</td><td><b>"+x.q.t+"</b><div class='fund'>"+x.q.f+"</div></td><td>"+x.q.w+"</td></tr>").join("")
+    || "<tr><td colspan='3'>No quedaron pendientes. Conserva la evidencia y agenda la revisión anual de la metodología.</td></tr>";
+
+  const barras=Object.keys(blk).filter(k=>blk[k].t>0).map(k=>{
+    const p2=Math.round(blk[k].o/blk[k].t*100);
+    const c=p2>=80?"#1B5E3F":(p2>=55?"#C4622B":"#B3261E");
+    return '<div class="blkrow"><span class="n">'+k+'</span><span class="b"><i style="width:'+p2+'%;background:'+c+'"></i></span><span class="v" style="color:'+c+'">'+p2+'%</span></div>';
+  }).join("");
+
+  const aviso = sinContestar ? '<div class="note"><b>Faltan '+sinContestar+' preguntas por contestar.</b> El resultado que ves es parcial: se calcula sólo sobre lo que respondiste.</div>' : '';
+
+  document.getElementById("res").innerHTML =
+    '<div class="score" style="background:'+col+'"><p class="lvl">'+lvl.toUpperCase()+'</p>'+
+    '<p class="pct">'+pct+'%</p><p class="txt">'+txt+'</p></div>'+ aviso +
+    '<h2>Tu avance, bloque por bloque</h2>'+barras+
+    '<h2>Por dónde empezar</h2>'+
+    '<p style="font-size:14.5px;color:var(--gray);margin:0 0 10px">Ordenado por criticidad. Cada renglón trae el artículo que lo sustenta y desde cuándo te es exigible.</p>'+
+    '<table><tr><th style="width:112px">Prioridad</th><th>Qué te falta</th><th style="width:33%">Cuándo importa</th></tr>'+filas+'</table>'+
+    '<div class="note"><b>Un pendiente vale más que los demás.</b> Si sólo pudieras atender uno esta semana, atiende el del bloque «El dato de 2026»: es el único que no se recupera después, porque la evaluación de riesgos exigible el 1 de marzo de 2027 se construye con la información del año que estás viviendo.</div>'+
+    '<div class="note" style="background:#EDF3EE;border-color:#1B5E3F;color:#1E5B41"><b>¿Y ahora?</b> Cada pendiente de arriba trae su artículo y su fecha. En la <a href="umbrales.html" style="color:#1B5E3F"><b>guía completa de la reforma</b></a> está el calendario con el fundamento de cada obligación, las definiciones, las diecisiete actividades vulnerables con sus umbrales, el articulado capítulo por capítulo y una calculadora que convierte los umbrales a pesos.</div>'+
+    '<div class="acts"><button class="primary" onclick="window.print()">Guardar mi resultado en PDF</button>'+
+    '<button class="ghost" onclick="copiar()">Copiar liga de mi resultado</button></div>';
+  document.getElementById("res").style.display="block";
+  history.replaceState(null,"","#r="+cadena);
+  document.getElementById("res").scrollIntoView({behavior:"smooth"});
+}
+
+function copiar(){
+  navigator.clipboard.writeText(location.href).then(
+    ()=>alert("Liga copiada. Quien la abra verá tus mismas respuestas y su resultado."),
+    ()=>prompt("Copia esta liga:",location.href));
+}
+
+// restaurar desde la liga
+(function(){const m=location.hash.match(/#r=([spnx-]+)/);if(!m)return;
+  [...m[1]].forEach((c,i)=>{if(DECODE[c]){const e=document.querySelector('input[name=q'+i+'][value="'+DECODE[c]+'"]');
+    if(e){e.checked=true;document.getElementById("q"+i).classList.add("done");}}});
+  prog();calcular();})();
+prog();
+</script>
+</body>
+</html>
