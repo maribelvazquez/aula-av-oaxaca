@@ -8,7 +8,24 @@
 <meta name="theme-color" content="#12224A">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312224A'/><text x='16' y='22' font-size='14' font-family='Georgia' font-weight='bold' fill='%23F2A541' text-anchor='middle'>AV</text></svg>">
 <link rel="stylesheet" href="estilo.css">
-</head>
+<style>
+.big3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 8px}
+.big3 a{display:block;text-decoration:none;background:var(--navy);color:#fff;border-radius:12px;padding:20px 22px}
+.big3 a b{display:block;color:var(--ambar);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.big3 a span{font-family:var(--serif);font-size:1.5rem;font-weight:bold}
+.big3 a small{display:block;color:#AEBCD8;font-size:.85rem;margin-top:4px}
+a.s{display:flex;gap:16px;align-items:flex-start;text-decoration:none;color:var(--tinta);border:1px solid var(--linea);border-left:5px solid var(--navy);border-radius:9px;padding:14px 18px;margin:0 0 10px}
+a.s:hover{background:var(--hueso)}
+a.s .n{font-family:var(--serif);font-size:1.6rem;font-weight:bold;color:var(--ambar-osc);min-width:56px;text-align:center;line-height:1.1}
+a.s .t{font-family:var(--serif);font-weight:bold;color:var(--navy);font-size:1.08rem}
+a.s .h{margin-left:10px;font-size:.78rem;font-weight:bold;color:var(--gris)}
+a.s .d{font-size:.9rem;color:var(--gris)}
+a.b{display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:var(--tinta);border:1px solid var(--linea);border-radius:9px;padding:13px 16px;margin:0 0 9px}
+a.b:hover{background:var(--hueso)}
+a.b .bx{flex:none;min-width:48px;text-align:center;background:var(--navy);color:var(--ambar);font-weight:bold;border-radius:6px;padding:6px 4px;font-size:.85rem}
+a.b .bt{display:block;font-weight:bold;color:var(--navy)} a.b .bd{display:block;font-size:.88rem;color:var(--gris)}
+@media(max-width:820px){.big3{grid-template-columns:1fr} a.s .h{display:block;margin:2px 0 0}}
+</style></head>
 <body>
 <header class="hero">
   <div class="wrap">
@@ -21,85 +38,15 @@
   </div>
 </header>
 
-<nav class="blocks"><div class="wrap"><ol>
-  <li><a href="#dia1"><b>Miércoles 21</b>Día 1</a></li>
-  <li><a href="#dia2"><b>Jueves 22</b>Día 2</a></li>
-  <li><a href="#herramientas"><b>En línea</b>Herramientas</a></li>
-  <li><a href="#descargas"><b>Para su equipo</b>Descargas</a></li>
-  <li><a href="biblioteca/index.html"><b>Fuentes</b>Biblioteca</a></li>
-  <li><a href="evaluacion/index.html"><b>Cierre</b>Evaluación</a></li>
-</ol></div></nav>
-
 <div class="wrap">
-
-<section class="bloque" id="inicio">
-  <h2>Cómo usar esta aula</h2>
-  <p class="dosr">Cada módulo trae la explicación con su fundamento, ejemplos resueltos, las trampas de lectura, la dinámica que hicimos en mesas con sus respuestas, un repaso y sus descargables. Vuelva cuando lo necesite: la liga no caduca.</p>
-  <div class="grid g3">
-    <div class="card"><p class="et">Objetivo</p><h4>Identificar</h4><p>Qué es una Actividad Vulnerable conforme a la LFPIORPI y cuándo se dispara la obligación de identificar y de dar aviso.</p></div>
-    <div class="card"><p class="et">Objetivo</p><h4>Ubicar</h4><p>Las obligaciones del artículo 18 tras la reforma y su calendario: 30 de noviembre de 2026, 1 de marzo y 1 de junio de 2027, y 2028.</p></div>
-    <div class="card"><p class="et">Objetivo</p><h4>Aplicar</h4><p>Expediente, beneficiario controlador, enfoque basado en riesgos y mecanismos automatizados, con herramientas listas para usar.</p></div>
-  </div>
-  <div class="citas">
-    <span class="cita L"><i>L</i><span>Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita</span></span>
-    <span class="cita R"><i>R</i><span>Reglamento</span></span>
-    <span class="cita RCG"><i>RCG</i><span>Reglas de Carácter General · ACUERDO 115/2026</span></span>
-    <span class="cita CPF"><i>CPF</i><span>Código Penal Federal</span></span>
-    <span class="cita RES"><i>RES</i><span>Resoluciones de formatos · DOF 24-sep-2026</span></span>
-  </div>
-</section>
-
-<section class="bloque" id="dia1">
-  <span class="reloj">DÍA 1 · MIÉRCOLES 21 DE OCTUBRE · 3:00 A 7:00 PM</span>
-  <h2>Qué es una Actividad Vulnerable y qué obliga la ley hoy</h2>
-  <p class="sub">Conceptos, Ley Antilavado, estructura del régimen, nuevas obligaciones, penas y sanciones.</p>
-  <div class="mods">
-    <a class="mod" href="m1/index.html"><div class="n">1</div><h4>Conceptos básicos PLD/FT</h4><p>Lavado de dinero y sus etapas, financiamiento al terrorismo y a la proliferación, GAFI, UIF y SAT, y qué es ser sujeto obligado.</p><div class="h">3:00 – 4:10 pm · incluye la apertura</div></a>
-    <a class="mod" href="m2/index.html"><div class="n">2</div><h4>La Ley Antilavado aplicada a las AV</h4><p>Las fracciones del artículo 17, los umbrales de identificación y de aviso, el alta en el padrón y los avisos del día 17.</p><div class="h">4:10 – 5:10 pm</div></a>
-    <a class="mod" href="m3/index.html"><div class="n">3</div><h4>Las nuevas obligaciones y su calendario</h4><p>Cómo se armó el nuevo régimen, las obligaciones del artículo 18 y qué es exigible en cada fecha.</p><div class="h">5:25 – 6:25 pm</div></a>
-    <a class="mod" href="m4/index.html"><div class="n">4</div><h4>Penas, sanciones y responsabilidad</h4><p>Multas en UMA y en pesos, el artículo 400 Bis, la visita de verificación y la autocorrección.</p><div class="h">6:25 – 7:00 pm · incluye el cierre del día</div></a>
-  </div>
-  <table class="agenda">
-    <thead><tr><th>Horario</th><th>Contenido</th><th>Dinámica</th></tr></thead>
-    <tbody>
-      <tr><td class="k">3:00 – 3:15</td><td>Bienvenida y encuadre</td><td>Repaso rápido: mitos del antilavado</td></tr>
-      <tr><td class="k">3:15 – 4:10</td><td><a href="m1/index.html">Módulo 1 · Conceptos básicos PLD/FT</a></td><td>Exposición con casos comentados</td></tr>
-      <tr><td class="k">4:10 – 5:10</td><td><a href="m2/index.html">Módulo 2 · La Ley Antilavado aplicada a las AV</a></td><td><b>Dinámica 1 ·</b> ¿Soy Actividad Vulnerable? ¿Identifico o doy aviso?</td></tr>
-      <tr><td class="k">5:10 – 5:25</td><td>Coffee break</td><td>—</td></tr>
-      <tr><td class="k">5:25 – 6:25</td><td><a href="m3/index.html">Módulo 3 · Las nuevas obligaciones y su calendario</a></td><td>Repaso rápido: ¿qué me toca y cuándo?</td></tr>
-      <tr><td class="k">6:25 – 6:50</td><td><a href="m4/index.html">Módulo 4 · Penas, sanciones y responsabilidad</a></td><td><b>Dinámica 2 ·</b> ¿Cuánto cuesta este incumplimiento?</td></tr>
-      <tr><td class="k">6:50 – 7:00</td><td>Cierre del día y adelanto de la jornada 2</td><td>Síntesis y preguntas ancla</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section class="bloque" id="dia2">
-  <span class="reloj">DÍA 2 · JUEVES 22 DE OCTUBRE · 11:00 AM A 3:00 PM</span>
-  <h2>Cómo se cumple en la práctica</h2>
-  <p class="sub">Estructuras internas, conocimiento del cliente, beneficiario controlador, enfoque basado en riesgos y mecanismos automatizados.</p>
-  <div class="mods">
-    <a class="mod" href="m5/index.html"><div class="n">5</div><h4>Estructuras internas de cumplimiento</h4><p>El Representante Encargado de Cumplimiento, el Manual de Políticas Internas, la capacitación anual y la auditoría.</p><div class="h">11:00 am – 12:00 pm · incluye el repaso del Día 1</div></a>
-    <a class="mod" href="m6/index.html"><div class="n">6</div><h4>Identificación y conocimiento del cliente</h4><p>El expediente único de persona física y moral, su resguardo, las Personas Políticamente Expuestas y los errores que se repiten.</p><div class="h">12:00 – 12:55 pm</div></a>
-    <a class="mod" href="m7/index.html"><div class="n">7</div><h4>Beneficiario controlador</h4><p>Quién es tras la reforma, el umbral y el orden para identificarlo, las cadenas de titularidad y cómo documentar el procedimiento.</p><div class="h">1:10 – 1:50 pm</div></a>
-    <a class="mod" href="m8/index.html"><div class="n">8</div><h4>Enfoque basado en riesgos</h4><p>De umbrales a riesgo: los elementos de la metodología, los grados de riesgo del cliente y el perfil transaccional.</p><div class="h">1:50 – 2:35 pm</div></a>
-    <a class="mod" href="m9/index.html"><div class="n">9</div><h4>Mecanismos automatizados</h4><p>Qué debe poder hacer el sistema, por qué una hoja de cálculo bien diseñada puede bastar y qué preguntar a un proveedor.</p><div class="h">2:35 – 3:00 pm · incluye el cierre</div></a>
-    <a class="mod" href="evaluacion/index.html" style="border-top-color:var(--ambar)"><div class="n">✓</div><h4>Evaluación de aprendizaje</h4><p>Veinte preguntas sobre los nueve módulos, con la explicación de cada respuesta y su fundamento.</p><div class="h">2:50 – 3:00 pm</div></a>
-  </div>
-  <table class="agenda">
-    <thead><tr><th>Horario</th><th>Contenido</th><th>Dinámica</th></tr></thead>
-    <tbody>
-      <tr><td class="k">11:00 – 11:10</td><td>Repaso relámpago del Día 1</td><td>Repaso rápido: preguntas del Día 1</td></tr>
-      <tr><td class="k">11:10 – 12:00</td><td><a href="m5/index.html">Módulo 5 · Estructuras internas de cumplimiento</a></td><td>Revisión guiada del Manual modelo</td></tr>
-      <tr><td class="k">12:00 – 12:55</td><td><a href="m6/index.html">Módulo 6 · Identificación y conocimiento del cliente</a></td><td><b>Dinámica 3 ·</b> Calificador de expedientes</td></tr>
-      <tr><td class="k">12:55 – 1:10</td><td>Coffee break</td><td>—</td></tr>
-      <tr><td class="k">1:10 – 1:50</td><td><a href="m7/index.html">Módulo 7 · Beneficiario controlador</a></td><td><b>Dinámica 4 ·</b> Desarma la estructura</td></tr>
-      <tr><td class="k">1:50 – 2:35</td><td><a href="m8/index.html">Módulo 8 · Enfoque basado en riesgos</a></td><td>Recorrido por la matriz modelo</td></tr>
-      <tr><td class="k">2:35 – 2:50</td><td><a href="m9/index.html">Módulo 9 · Mecanismos automatizados</a></td><td>Repaso rápido: ¿su Excel cumple?</td></tr>
-      <tr><td class="k">2:50 – 3:00</td><td><a href="evaluacion/index.html">Cierre</a></td><td>Evaluación de aprendizaje y plan de acción de 90 días</td></tr>
-    </tbody>
-  </table>
-</section>
-
+<div class="big3">
+  <a href="#dia1"><b>Miércoles 21 · 3:00 a 7:00 pm</b><span>Día 1</span><small>Qué es una AV, qué obliga la ley y qué cuesta no cumplir</small></a>
+  <a href="#dia2"><b>Jueves 22 · 11:00 am a 3:00 pm</b><span>Día 2</span><small>Cómo se cumple en la práctica</small></a>
+  <a href="#biblioteca"><b>Fuentes y consulta</b><span>Biblioteca</span><small>Ley, Reglamento, Reglas, Avisos y Preguntas</small></a>
+</div>
+<section class="bloque" id="dia1"><h2>Día 1 · Miércoles 21 de octubre</h2><p class="sub">3:00 a 7:00 pm · Coffee break de 5:10 a 5:25</p><a class="s" href="m1/index.html#apertura"><span class="n">0</span><span><span class="t">Bienvenida</span><span class="h">3:00 – 3:15</span><br><span class="d">Rompehielos: lotería exprés de mitos del antilavado</span></span></a><a class="s" href="m1/index.html"><span class="n">1</span><span><span class="t">Conceptos básicos PLD/FT</span><span class="h">3:15 – 4:10</span><br><span class="d">lavado y sus etapas, terrorismo y proliferación, GAFI, UIF y SAT, qué es ser sujeto obligado</span></span></a><a class="s" href="m2/index.html"><span class="n">2</span><span><span class="t">La Ley Antilavado aplicada a las Actividades Vulnerables</span><span class="h">4:10 – 5:10</span><br><span class="d">art. 17, umbrales, alta, Representante, avisos al día 17 · Dinámica: ¿Soy AV? ¿Identifico o doy aviso?</span></span></a><a class="s" href="m3/index.html"><span class="n">3</span><span><span class="t">Las nuevas obligaciones y su calendario</span><span class="h">5:25 – 6:25</span><br><span class="d">las 12 fracciones del art. 18, 10 años, aviso de 24 horas, buzón, qué se exige y cuándo</span></span></a><a class="s" href="m4/index.html"><span class="n">4</span><span><span class="t">Penas, sanciones y responsabilidad</span><span class="h">6:25 – 7:00</span><br><span class="d">multas en pesos, 400 Bis, visita del SAT, autocorrección · Dinámica: ¿Cuánto cuesta este incumplimiento?</span></span></a></section>
+<section class="bloque" id="dia2"><h2>Día 2 · Jueves 22 de octubre</h2><p class="sub">11:00 am a 3:00 pm · Coffee break de 12:55 a 1:10</p><a class="s" href="m5/index.html"><span class="n">5</span><span><span class="t">Estructuras internas de cumplimiento</span><span class="h">11:00 – 12:00</span><br><span class="d">Representante, Manual y sus 14 fracciones, capacitación, selección de personal, auditoría</span></span></a><a class="s" href="m6/index.html"><span class="n">6</span><span><span class="t">Identificación y conocimiento del cliente</span><span class="h">12:00 – 12:55</span><br><span class="d">expediente de persona física y moral, PEP, errores frecuentes · Dinámica: Calificador de expedientes</span></span></a><a class="s" href="m7/index.html"><span class="n">7</span><span><span class="t">Beneficiario controlador</span><span class="h">1:10 – 1:50</span><br><span class="d">25 %, orden de prelación, capas y fideicomisos · Dinámica: Desarma la estructura</span></span></a><a class="s" href="m8/index.html"><span class="n">8</span><span><span class="t">Enfoque basado en riesgos</span><span class="h">1:50 – 2:35</span><br><span class="d">cuatro elementos, inherente y residual, grado de riesgo, perfil y alertas</span></span></a><a class="s" href="m9/index.html"><span class="n">9</span><span><span class="t">Mecanismos automatizados y formatos nuevos de Avisos</span><span class="h">2:35 – 2:50</span><br><span class="d">seis funciones del RCG 41, la hoja de cálculo, 1-jun-2027</span></span></a><a class="s" href="evaluacion/index.html"><span class="n">✓</span><span><span class="t">Evaluación de aprendizaje y plan de 90 días</span><span class="h">2:50 – 3:00</span><br><span class="d">conteste desde su celular y envíe sus resultados</span></span></a></section>
+<section class="bloque" id="biblioteca"><h2>Biblioteca</h2><p class="sub">En el orden en que se leen: primero la Ley (L), luego el Reglamento (R), luego las Reglas (RCG). Cuando un resumen y el Diario Oficial no coinciden, manda el Diario Oficial.</p><a class="b" href="biblioteca/LFPIORPI_texto_vigente_DOF_16_julio_2025.pdf" target="_blank"><span class="bx">L</span><span><span class="bt">Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita</span><span class="bd">Texto vigente · reforma DOF 16 de julio de 2025. La primera capa: es la que crea las obligaciones.</span></span></a><a class="b" href="biblioteca/Reglamento_LFPIORPI_texto_vigente_DOF_27_marzo_2026.pdf" target="_blank"><span class="bx">R</span><span><span class="bt">Reglamento de la Ley</span><span class="bd">Texto vigente · reforma DOF 27 de marzo de 2026. Desarrolla lo que la Ley enuncia: fecha del acto, bases de cálculo, acumulación, aviso de 24 horas, efectivo.</span></span></a><a class="b" href="biblioteca/Reglas_de_Caracter_General_texto_compilado.pdf" target="_blank"><span class="bx">RCG</span><span><span class="bt">Reglas de Carácter General · texto compilado</span><span class="bd">Las Reglas con el ACUERDO 115/2026 incorporado, para consulta. Ante cualquier diferencia, manda el DOF.</span></span></a><a class="b" href="biblioteca/ACUERDO_115_2026_DOF_07_agosto_2026.pdf" target="_blank"><span class="bx">RCG</span><span><span class="bt">ACUERDO 115/2026 · publicación del DOF</span><span class="bd">7 de agosto de 2026; entra en vigor el 30 de noviembre de 2026. Es la fuente con valor legal de las Reglas reformadas.</span></span></a><a class="b" href="biblioteca/Resolucion_Formatos_Avisos_DOF_24_septiembre_2026.pdf" target="_blank"><span class="bx">RES</span><span><span class="bt">Avisos · Resolución de los formatos de Avisos e Informes</span><span class="bd">DOF 24 de septiembre de 2026. Los 22 anexos con cada campo del Aviso. Obligatorios para todos los Avisos desde el 1 de junio de 2027.</span></span></a><a class="b" href="biblioteca/Resolucion_Alta_y_Registro_DOF_24_septiembre_2026.pdf" target="_blank"><span class="bx">RES</span><span><span class="bt">Resolución del formato de alta y registro</span><span class="bd">DOF 24 de septiembre de 2026. Nuevo formato de alta en el padrón.</span></span></a><a class="b" href="biblioteca/Preguntas_del_Sector_ACUERDO_115.pdf" target="_blank"><span class="bx">?</span><span><span class="bt">Preguntas del sector · 216 preguntas</span><span class="bd">Compendio de preguntas y respuestas sobre la reforma, ordenado por tema, con fundamento y semáforo de certeza normativa. Décima edición, 6 de octubre de 2026.</span></span></a><a class="b" href="biblioteca/Evaluacion_Nacional_de_Riesgos_2023.pdf" target="_blank"><span class="bx">ENR</span><span><span class="bt">Evaluación Nacional de Riesgos 2023</span><span class="bd">Documento oficial de los riesgos de lavado y financiamiento al terrorismo en México. Insumo obligado de la evaluación de riesgos.</span></span></a></section>
 <section class="bloque" id="herramientas">
   <h2>Herramientas en línea</h2>
   <p class="sub">Funcionan en el teléfono y no guardan su información.</p>
