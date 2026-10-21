@@ -30,7 +30,16 @@
 <div class="wrap">
 <section class="bloque" id="evaluacion">
   <h2>Antes de empezar</h2>
-  <p class="dosr">Elija una respuesta por pregunta; al hacerlo verá la correcta y por qué. Al terminar, imprima o guarde en PDF sus resultados. Si la contestó al inicio, compare.</p>
+  <p class="dosr">Elija una respuesta por pregunta; al hacerlo verá la correcta y por qué. Al terminar, toque <b>«Enviar mis resultados»</b> al final de la página: la instructora los recibe para su constancia.</p>
+  <div class="card" style="margin:0 0 18px">
+    <p class="et">Sus datos</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="g2">
+      <label style="font-size:.9rem">Nombre completo<br><input id="ev-nombre" autocomplete="name" style="width:100%;padding:9px;border:1px solid #CBD2DC;border-radius:6px;font:inherit"></label>
+      <label style="font-size:.9rem">Correo electrónico<br><input id="ev-correo" type="email" autocomplete="email" style="width:100%;padding:9px;border:1px solid #CBD2DC;border-radius:6px;font:inherit"></label>
+      <label style="font-size:.9rem">Despacho o empresa<br><input id="ev-empresa" style="width:100%;padding:9px;border:1px solid #CBD2DC;border-radius:6px;font:inherit"></label>
+      <label style="font-size:.9rem">¿Cuándo la contesta?<br><select id="ev-momento" style="width:100%;padding:9px;border:1px solid #CBD2DC;border-radius:6px;font:inherit"><option value="salida">Al cierre del curso</option><option value="entrada">Al inicio del curso</option></select></label>
+    </div>
+  </div>
   <div class="qbar"><button type="button" onclick="window.print()">Imprimir mis resultados</button><span class="sc"></span></div>
 
   <!-- Módulo 1 -->
@@ -185,6 +194,16 @@
   <div class="qbar"><button type="button" onclick="window.print()">Imprimir mis resultados</button></div>
   <div class="banda">¿Ya terminó? <strong>Escriba ahora su compromiso de 90 días:</strong> cinco acciones con fecha y fundamento, en el cierre del Módulo 9.</div>
   <p><a href="../m9/index.html#cierre">Ir al compromiso de 90 días</a> · <a href="../descargables/Plan_de_Implementacion.xlsx" download>Descargar el Plan de implementación</a></p>
+
+  <div class="card dark" id="ev-envio" style="margin-top:22px">
+    <p class="et">Último paso</p><h4>Enviar mis resultados</h4>
+    <p id="ev-estado">Conteste las 20 preguntas y toque el botón. Sólo se envía una vez.</p>
+    <div class="qbar" style="margin-top:12px"><button type="button" id="ev-enviar" style="background:#F2A541;color:#12224A">Enviar mis resultados</button><button type="button" class="alt" onclick="window.print()">Imprimir</button></div>
+  </div>
+  <form name="evaluacion" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input name="bot-field"><input name="nombre"><input name="correo"><input name="empresa"><input name="momento">
+    <input name="aciertos"><input name="contestadas"><input name="detalle">
+  </form>
 </section>
 
 <div class="modnav"><a href="../m9/index.html"><small>&#8592; Anterior</small>Módulo 9 · Mecanismos automatizados</a><a class="sig" href="../index.html"><small>Siguiente &#8594;</small>Portada del curso</a></div>
@@ -192,5 +211,25 @@
 </div>
 <footer><div class="wrap"><b>Curso–taller PLD/FT · Actividades Vulnerables</b>GMC360 Oterces Consultores de México · 360Educa · Maribel Vázquez Menchaca</div></footer>
 <script src="../app.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('ev-enviar'), est=document.getElementById('ev-estado');
+  var KEY='ev-aula-av-enviado'; try{ if(localStorage.getItem(KEY)){ est.textContent='Sus resultados ya se enviaron desde este dispositivo. Gracias.'; } }catch(e){}
+  btn.addEventListener('click',function(){
+    var nombre=document.getElementById('ev-nombre').value.trim(), correo=document.getElementById('ev-correo').value.trim();
+    if(!nombre||!correo){ est.textContent='Escriba su nombre y su correo arriba, en «Sus datos».'; document.getElementById('ev-nombre').scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    var qs=[].slice.call(document.querySelectorAll('.q')), det=[], ok=0, n=0;
+    qs.forEach(function(q,i){ var ops=[].slice.call(q.querySelectorAll('button.op')); var sel=-1;
+      if(q.dataset.done){ n++; var no=q.querySelector('button.op.no'); sel= no? ops.indexOf(no) : +q.dataset.ok; if(!no) ok++; }
+      det.push('P'+(i+1)+':'+(sel<0?'-':'abcd'[sel])+(sel<0?'':(sel===+q.dataset.ok?'✓':'✗'))); });
+    if(n<qs.length && !confirm('Contestó '+n+' de '+qs.length+'. ¿Enviar de todos modos?')) return;
+    var d={'form-name':'evaluacion',nombre:nombre,correo:correo,empresa:document.getElementById('ev-empresa').value.trim(),momento:document.getElementById('ev-momento').value,aciertos:ok+' de '+qs.length,contestadas:String(n),detalle:det.join(' ')};
+    btn.disabled=true; est.textContent='Enviando…';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()})
+      .then(function(r){ if(!r.ok) throw 0; est.innerHTML='<b>Listo.</b> Se enviaron sus resultados: '+ok+' de '+qs.length+' correctas. Gracias, '+nombre.split(' ')[0]+'.'; try{localStorage.setItem(KEY,'1')}catch(e){} })
+      .catch(function(){ btn.disabled=false; est.textContent='No se pudo enviar. Revise su conexión y vuelva a intentar, o tome una captura de pantalla de su resultado.'; });
+  });
+})();
+</script>
 </body>
 </html>
