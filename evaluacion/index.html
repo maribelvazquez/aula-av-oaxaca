@@ -197,7 +197,7 @@
 
   <div class="card dark" id="ev-envio" style="margin-top:22px">
     <p class="et">Último paso</p><h4>Enviar mis resultados</h4>
-    <p id="ev-estado">Conteste las 20 preguntas y toque el botón. Sólo se envía una vez.</p>
+    <p id="ev-estado">Conteste las 20 preguntas y toque el botón. Tiene <b>dos intentos</b>: si quiere mejorar su resultado, puede presentarla una segunda vez.</p>
     <div class="qbar" style="margin-top:12px"><button type="button" id="ev-enviar" style="background:#F2A541;color:#12224A">Enviar mis resultados</button><button type="button" class="alt" onclick="window.print()">Imprimir</button></div>
   </div>
   <form name="evaluacion" data-netlify="true" netlify-honeypot="bot-field" hidden>
@@ -214,7 +214,9 @@
 <script>
 (function(){
   var btn=document.getElementById('ev-enviar'), est=document.getElementById('ev-estado');
-  var KEY='ev-aula-av-enviado'; try{ if(localStorage.getItem(KEY)){ est.textContent='Sus resultados ya se enviaron desde este dispositivo. Gracias.'; } }catch(e){}
+  var KEY='ev-aula-av-intentos', MAX=2, usados=0; try{ usados=+(localStorage.getItem(KEY)||0); if(!usados&&localStorage.getItem('ev-aula-av-enviado')) usados=1; }catch(e){}
+  if(usados>=MAX){ btn.disabled=true; est.textContent='Ya presentó sus dos intentos desde este dispositivo. Gracias.'; }
+  else if(usados===1){ est.innerHTML='Éste es su <b>segundo y último intento</b>. Conteste y toque el botón.'; }
   btn.addEventListener('click',function(){
     var nombre=document.getElementById('ev-nombre').value.trim(), correo=document.getElementById('ev-correo').value.trim();
     if(!nombre||!correo){ est.textContent='Escriba su nombre y su correo arriba, en «Sus datos».'; document.getElementById('ev-nombre').scrollIntoView({behavior:'smooth',block:'center'}); return; }
@@ -223,10 +225,13 @@
       if(q.dataset.done){ n++; var no=q.querySelector('button.op.no'); sel= no? ops.indexOf(no) : +q.dataset.ok; if(!no) ok++; }
       det.push('P'+(i+1)+':'+(sel<0?'-':'abcd'[sel])+(sel<0?'':(sel===+q.dataset.ok?'✓':'✗'))); });
     if(n<qs.length && !confirm('Contestó '+n+' de '+qs.length+'. ¿Enviar de todos modos?')) return;
-    var d={'form-name':'evaluacion',nombre:nombre,correo:correo,empresa:document.getElementById('ev-empresa').value.trim(),momento:document.getElementById('ev-momento').value,aciertos:ok+' de '+qs.length,contestadas:String(n),detalle:det.join(' ')};
+    var d={'form-name':'evaluacion',nombre:nombre,correo:correo,empresa:document.getElementById('ev-empresa').value.trim(),momento:document.getElementById('ev-momento').value,aciertos:ok+' de '+qs.length+' · intento '+(usados+1),contestadas:String(n),detalle:det.join(' ')};
     btn.disabled=true; est.textContent='Enviando…';
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(d).toString()})
-      .then(function(r){ if(!r.ok) throw 0; est.innerHTML='<b>Listo.</b> Se enviaron sus resultados: '+ok+' de '+qs.length+' correctas. Gracias, '+nombre.split(' ')[0]+'.'; try{localStorage.setItem(KEY,'1')}catch(e){} })
+      .then(function(r){ if(!r.ok) throw 0; usados++; try{localStorage.setItem(KEY,String(usados))}catch(e){}
+        est.innerHTML='<b>Listo.</b> Se enviaron sus resultados (intento '+usados+' de '+MAX+'): '+ok+' de '+qs.length+' correctas. Gracias, '+nombre.split(' ')[0]+'.';
+        if(usados<MAX){ var b2=document.createElement('button'); b2.type='button'; b2.textContent='Presentar mi segundo intento'; b2.style.cssText='margin-top:10px;background:#fff;color:#12224A';
+          b2.onclick=function(){ location.href=location.pathname+'?intento=2'; }; est.appendChild(document.createElement('br')); est.appendChild(b2); } })
       .catch(function(){ btn.disabled=false; est.textContent='No se pudo enviar. Revise su conexión y vuelva a intentar, o tome una captura de pantalla de su resultado.'; });
   });
 })();
